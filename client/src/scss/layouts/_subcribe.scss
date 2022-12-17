@@ -1,0 +1,37 @@
+.subcribe{
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    .subcribe-frame{  
+       background-size: contain;
+       background-repeat: no-repeat;
+       min-height: 402px;
+       .des{
+          .title{
+             font-size: 60px;
+          }
+       }
+       .regular{
+          background: #F6F6F6;
+          border-radius: 50px;
+          width:460px ;
+          height: 56px;
+          .form-regular{
+             border: none;
+             background-color: #f6f6f6;
+             padding-left:28px;
+             &:focus{
+                outline: none;
+             }
+          }
+          .submit-regular{
+             @include button-explore(124px,46px,black,white,18px);
+             .text{
+                font-size: 12px;
+             }
+          }
+       }
+    }
+ }
+ 
+ 

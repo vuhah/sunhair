@@ -1,0 +1,31 @@
+.our-products {
+  margin-top: 200px;
+  background-color: #f6f6f6;
+  padding-bottom: 24px;
+  .title {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 95px;
+    /* identical to box height */
+
+    color: #0a0a12;
+  }
+
+  .description {
+    margin-top: 12px;
+    font-style: italic;
+    font-size: 18px;
+    font-family: "Cardo", serif;
+  }
+  a {
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    text-decoration: none;
+    color: #000000;
+  }
+}

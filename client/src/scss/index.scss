@@ -1,0 +1,31 @@
+// sass-utils/
+
+// vendors/
+@import "./vendors/bootstrap";
+@import "./vendors/animations";
+
+// base/
+@import "./base/reset";
+@import "./base/shine";
+
+// layout/
+@import "./layouts/header";
+@import "./layouts/thumbnail";
+@import "./layouts/aboutus";
+@import "./layouts/teaserimage";
+@import "./layouts/reasonchoose";
+@import "./layouts/ourproduct";
+@import "./layouts/feedback.scss";
+@import "./layouts/footer";
+@import "./layouts/subcribe";
+
+// components/
+@import "./components/button.scss";
+@import "./components/our-product-cards";
+
+// pages/
+@import "./pages/home";
+@import "./pages/product";
+@import "./pages/productdetail";
+@import "./pages/blog";
+@import "./pages/blogdetail";
