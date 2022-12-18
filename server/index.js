@@ -14,9 +14,6 @@ app.get("", (req, res) => {
   res.send("hello");
 });
 
-app.get("/hello", (req, res) => {
-  res.send("world"); 
-});
 
 app.listen(process.env.PORT, () => {
   console.log("OK", process.env.PORT);
