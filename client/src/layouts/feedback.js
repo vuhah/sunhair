@@ -19,12 +19,12 @@ function Feedback() {
           animateIn="animate__bounceInLeft"
           className=" row justify-content-around"
         >
-          <div className="col-4 pt-3">
+          <div className="col-8 pt-2">
             <div className="hr mt-5"></div>
           </div>
-          <div className="col-8 text-end">
+          <div className="col-4 text-end">
             <p className="title">
-              WHAT A CUSTOMERS <br /> SAYING{" "}
+              CUSTOMERS
             </p>
           </div>
         </AnimationOnScroll>

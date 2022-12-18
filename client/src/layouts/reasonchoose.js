@@ -26,7 +26,7 @@ function ReasonChoose() {
         <div className="col-auto ">
           <AnimationOnScroll
             animateIn="animate__fadeInDownBig"
-            className="reason1 d-flex flex-column align-items-center justify-content-center"
+            className="reason1 d-flex flex-column align-items-center "
             style={{ backgroundImage: `url(${DirectWhosesale})` }}
           >
             <p className="content-title reason1-title">
@@ -35,9 +35,9 @@ function ReasonChoose() {
             <p className="content-description reason1-description">
               We are direct wholesale <br /> manufactures with the best price
             </p>
-            <button type="button" className="button-explore">
+            {/* <button type="button" className="button-explore">
               <p className="text">Learn more</p>
-            </button>
+            </button> */}
           </AnimationOnScroll>
 
           <AnimationOnScroll
@@ -52,9 +52,9 @@ function ReasonChoose() {
               24/7 customer service <br/>
               Our slogan is YOUR BEAUTY - OUR MISSION
             </p>
-            <button type="button" className="button-explore mt-3">
+            {/* <button type="button" className="button-explore mt-3">
               <p className="text">Learn more</p>
-            </button>
+            </button> */}
           </AnimationOnScroll>
         </div>
 
@@ -73,9 +73,9 @@ function ReasonChoose() {
                   Sun Hair Company supplies high-quality <br /> 100% human hair
                   at wholesale factory price.
                 </p>
-                <button type="button" className="button-explore mt-3">
+                {/* <button type="button" className="button-explore mt-3">
                   <p className="text">Learn more</p>
-                </button>
+                </button> */}
               </AnimationOnScroll>
             </div>
             <div className="row justify-content-between mt-3">
@@ -90,7 +90,7 @@ function ReasonChoose() {
                     Payment online thou Western Union/ <br />
                     Moneygram/Bank Online Transfer
                   </p>
-                  <a href="/">Learn more</a>
+                  {/* <a href="/">Learn more</a> */}
                 </div>
                 <div className="text-end mb-5 me-4">
                   <p className="content-title reason3-title">BEST SUPPLIER</p>
@@ -98,7 +98,7 @@ function ReasonChoose() {
                     Sun Hair is a loyal vendor of big hair sellers: in Russia,{" "}
                     <br /> Nigeria, Cameroon, the US, the UK, and China,...
                   </p>
-                  <a href="/">Learn more</a>
+                  {/* <a href="/">Learn more</a> */}
                 </div>
               </AnimationOnScroll>
               <AnimationOnScroll
@@ -113,9 +113,9 @@ function ReasonChoose() {
                   100% exchange policy for customers <br />
                   if the fault is from the manufacturer
                 </p>
-                <button type="button" className="button-explore">
+                {/* <button type="button" className="button-explore">
                   <p className="text">Learn more</p>
-                </button>
+                </button> */}
               </AnimationOnScroll>
             </div>
           </div>
