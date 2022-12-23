@@ -1,18 +1,21 @@
-import express from "express";
-import cors from "cors";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
+import app from "./src/app.js";
 
 dotenv.config();
 
-const app = express();
 
-app.use(cors());
-app.use(express.json());
-
-app.get("", (req, res) => {
-  res.send("hello");
-});
+mongoose.set("strictQuery", false);
+mongoose
+  .connect(
+    "mongodb+srv://admin:admin123@cluster0.xp0n2bl.mongodb.net/sunhair?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true, 
+      useUnifiedTopology: true,
+    } 
+  )
+  .then(() => console.log("connected MongooDB"))
+  .catch((err) => console.log(err));
 
 
 app.listen(process.env.PORT, () => {

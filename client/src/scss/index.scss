@@ -18,10 +18,14 @@
 @import "./layouts/feedback.scss";
 @import "./layouts/footer";
 @import "./layouts/subcribe";
+@import "./layouts/sidebar";
+@import "./layouts/homepanel";
+@import "./layouts/store";
 
 // components/
 @import "./components/button.scss";
 @import "./components/our-product-cards";
+@import "./components/refTab";
 
 // pages/
 @import "./pages/home";
@@ -29,3 +33,4 @@
 @import "./pages/productdetail";
 @import "./pages/blog";
 @import "./pages/blogdetail";
+@import "./pages/dashboard"

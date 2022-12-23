@@ -1,4 +1,4 @@
-import Header from "./header";
+import Header from "../components/header";
 import { ImgSlide1, ImgSlide2 } from "../images/home/thumbnail";
 
 const Slide1 = () => {

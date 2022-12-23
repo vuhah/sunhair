@@ -1,5 +1,6 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ExternalLink } from "../images/common";
+
 function OurProducts() {
   return (
     <div className="container our-products">
@@ -16,7 +17,10 @@ function OurProducts() {
         </div>
 
         <main className="page-content1">
-          <div className="card1">
+          <div
+            className="card1"
+
+          >
             <div className="content1">
               <h2 className="title1">Weft hair</h2>
               <p className="copy1">

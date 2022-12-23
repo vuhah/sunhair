@@ -31,14 +31,14 @@ function Feedback() {
       </div>
       {/* <p className="title text-end a">SAYING? </p> */}
 
-      <AnimationOnScroll animateIn="animate__backInDown" className="container-fluid">
+      <div className="container-fluid">
         <div className="horizontal">
           <div
             id="carouselExampleControls"
             className="carousel slide"
             data-bs-ride="carousel"
           >
-            <div className="carousel-inner">
+            <AnimationOnScroll animateIn="animate__backInDown" className="carousel-inner">
               <div className="carousel-item active">
                 <div className="container">
                   <div className="row mt-5 justify-content-around">
@@ -84,10 +84,10 @@ function Feedback() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimationOnScroll>
           </div>
         </div>
-      </AnimationOnScroll>
+      </div>
     </div>
   );
 }
