@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(fileupload())
 
+app.get("/hello",(req,res)=>{
+    res.send("hellp")
+})
 app.use("/api", api);
 
 export default app;  
