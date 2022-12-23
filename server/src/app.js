@@ -14,6 +14,7 @@ app.use(fileupload())
 app.get("/hello",(req,res)=>{
     res.send("hellp")
 })
+
 app.use("/api", api);
 
 export default app;  
