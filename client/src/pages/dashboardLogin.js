@@ -18,21 +18,21 @@ export default function DashboardLogin() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <form>
-        <div class="mb-3">
+        <div class="mb-3 pt-5">
           <label for="exampleInputEmail1" class="form-label">
-            Email address
+            Username
           </label>
           <input
-            type="email"
+            type="username"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(e) => setTypingUsername(e.target.value)}
           />
           <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
+            Never share your email & password with anyone else.
           </div>
         </div>
         <div class="mb-3">

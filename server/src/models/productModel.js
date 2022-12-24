@@ -8,6 +8,12 @@ const products = mongoose.Schema({
   category: {
     type: String,
   },
+  images: [
+    {
+      name: String,
+      data: Buffer,
+    },
+  ],
   information: {
     type: String,
   },
@@ -20,13 +26,9 @@ const products = mongoose.Schema({
   instructionManual: {
     type: String,
   },
-  // shipreturn: {
-  //   type: String,
-  // },
   available: {
     type: Boolean,
   },
-
 });
 
 export const productDB = mongoose.model("products", products);

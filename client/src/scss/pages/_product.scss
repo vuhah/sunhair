@@ -2,10 +2,13 @@
   font-family: "Yaldevi";
 
   .header {
-    top: 25px !important;
+    top: 28px !important;
+    .nav-link{
+      font-size:13px !important;
+    }
   }
   .path-cart {
-    margin-top: 90px;
+    margin-top: 80px;
     .path {
       font-weight: 500;
       font-size: 12px;
@@ -26,7 +29,20 @@
       outline: none;
       border: none;
       background-color: transparent;
-      font-size:13px
+      font-size:12px;
+      font-weight: 500;
+      &:hover{
+        font-size: 13px;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+  .products{
+    max-height: 1200px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
     }
   }
 }

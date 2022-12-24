@@ -5,6 +5,7 @@ export class ProductServie {
     const product = await productDB.create({
       name: body.name,
       category: body.category,
+      images: body.images,
       information: body.information,
       definition: body.definition,
       characteristics: body.characteristics,
@@ -14,17 +15,19 @@ export class ProductServie {
     return product._id.toString();
   };
   static findProducts = async() => {
-    const products = await productDB.find({}).select('_id name category available')
+    const products = await productDB.find({}).select('_id name images category available')
     return products
   }
+  static queryAllProducts = async() => {
+    const products = await(productDB.find({}))
+    return products
+  }
+  static updateProductById = async(id,body)=>{
+    const product = await productDB.findOneAndUpdate({_id:id},body)
+    return product
+  }
+  static deleteProductById = async(id) =>{
+    await productDB.findOneAndDelete({_id:id})
+  }
 } 
-
-/* 
-    "name":"a",
-    "category":"b",
-    "information":"c",
-    "definition":"d",
-    "characteristics":"d",
-    "instructionManual":"e",
-    "available":true
-*/
+ 

@@ -120,7 +120,7 @@ export default function Product() {
             <p className="title">CATEGORIES</p>
             {categories.map((category, index) => (
               <button
-                className="category mt-4"
+                className="category mt-5"
                 key={index}
                 onClick={(e) =>
                   handleChooseCategory(e, category.nameCate, category.codepath)
@@ -132,7 +132,7 @@ export default function Product() {
           </div>
           <div className="col-9">
             <div className="container-fluid m-0">
-              <div className="row justify-content-between">
+              <div className="row justify-content-between products">
                 {currentProducts.map((ele, index) => (
                   <div key={index} className="col-4">
                     <CardProps
