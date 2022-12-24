@@ -9,5 +9,10 @@ router.post('/createProduct', createProduct)
 // router.post('/updateProduct',updateProduct)
 router.post('/update/:id',updateProduct)
 router.post('/delete/:id',deleteProductById)
+
+router.get('/hi',(req,res)=>{
+    res.send("lo")
+})
+
 export default router
     
