@@ -37,7 +37,7 @@ export default function AddProductPanel({addTrigger}) {
     async function send() {
       try {
         const res = await axios.post(
-          `http://localhost:8000/api/product/createProduct`,
+          `https://sunhair-x98n-87w7gk3ar-vuhah.vercel.app/api/product/createProduct`,
           formData,
           {
             headers: {
