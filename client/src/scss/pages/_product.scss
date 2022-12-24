@@ -1,0 +1,32 @@
+.product {
+  font-family: "Yaldevi";
+
+  .header {
+    top: 25px !important;
+  }
+  .path-cart {
+    margin-top: 90px;
+    .path {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 13px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  .categories {
+    .title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+    }
+    .category {
+      cursor: pointer;
+      display: block;
+      padding: 0;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size:13px
+    }
+  }
+}

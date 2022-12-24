@@ -1,7 +1,33 @@
 .store {
   h1 {
-    padding-top: 54px;
+    padding-top: 22px;
     font-size: 36px;
     line-height: 47px;
   }
+  .header {
+    border-bottom: 1px solid white;
+  }
+  .productDetail {
+    height: 75vh;
+    overflow: auto;
+    .row {
+      height: 80px;
+      &:nth-child(2n) {
+        background-color: rgb(75, 75, 75);
+      }
+      div {
+        height: 100%;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: transparent;
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+  }
+
 }

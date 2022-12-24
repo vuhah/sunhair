@@ -1,0 +1,53 @@
+.addNewItem {
+  height: 610px;
+  width: 1200px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 10px;
+  h1 {
+    padding-top: 32px;
+    font-size: 28px;
+    line-height: 47px;
+    border-bottom: 1px solid black;
+  }
+  label{
+    font-size: 14px;
+    line-height: 42px;  
+  }
+  .checkbox{
+    margin-left: 126px;
+  }
+  textarea{
+    height: 62px;
+  }
+  select{
+    height: 32px;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+  .button{
+    width: 80px;
+    height: 32px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  }
+}
+.button-addnewItem {
+  width: 100px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+}
