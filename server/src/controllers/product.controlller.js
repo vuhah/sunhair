@@ -8,9 +8,9 @@ export const deleteProductById = async (req, res) => {
 };
 
 export const getAllProducts = async (req, res) => {
-  // const products = await ProductServie.queryAllProducts();
-  // res.send(products);
-  res.send("OK")
+  const products = await ProductServie.queryAllProducts();
+  res.send(products);
+
 };
 
 export const getAllProductsSelected = async (req, res) => {
