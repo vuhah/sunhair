@@ -17,7 +17,7 @@ mongoose
   .then(() => console.log("connected MongooDB"))
   .catch((err) => console.log(err));
 
-app.use(cors());
+app.options("*", cors());
 
 app.listen(process.env.PORT, () => {
   console.log("OK", process.env.PORT);

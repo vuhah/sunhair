@@ -1,11 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import Header from "../components/header";
 import TopEvent from "../components/topEvent";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setInitialProducts,
-  returnRootPath,
   newCategory,
 } from "../redux/productPathSlice";
 
