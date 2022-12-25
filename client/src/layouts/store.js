@@ -12,7 +12,7 @@ export default function Store() {
     const getAllProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/product/getProducts`,
+          `https://sunhair-x98n.vercel.app/api/product/getProducts`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
@@ -20,6 +20,8 @@ export default function Store() {
             },
           }
         );
+
+        
         const products = res.data;
 
         console.log(products);

@@ -19,7 +19,7 @@ export class ProductServie {
     return products
   }
   static queryAllProducts = async() => {
-    const products = await(productDB.find({}))
+    const products = await(productDB.find({})).select('_id name category information definition characteristics instructionManual available')
     return products
   }
   static updateProductById = async(id,body)=>{

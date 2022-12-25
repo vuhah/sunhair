@@ -37,7 +37,7 @@ export default function EditProductPanel({ product, trigger }) {
     async function send() {
       try {
         const res = await axios.post(
-          `https://sunhair-x98n-87w7gk3ar-vuhah.vercel.app/api/product/update/${product._id}`,
+          `https://sunhair-x98n.vercel.app/api/product/update/${product._id}`,
           formData,
           {
             headers: {
@@ -59,7 +59,7 @@ export default function EditProductPanel({ product, trigger }) {
     async function deleteProduct(id) {
       try {
         const res = await axios.post(
-          `https://sunhair-x98n-87w7gk3ar-vuhah.vercel.app/api/product/delete/${product._id}`,
+          `https://sunhair-x98n.vercel.app/api/product/delete/${product._id}`,
           {
             id: id,
           }

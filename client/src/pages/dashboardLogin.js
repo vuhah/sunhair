@@ -20,28 +20,28 @@ export default function DashboardLogin() {
   return (
     <div className="container mt-5">
       <form>
-        <div class="mb-3 pt-5">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3 pt-5">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Username
           </label>
           <input
             type="username"
-            class="form-control"
+            className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={(e) => setTypingUsername(e.target.value)}
           />
-          <div id="emailHelp" class="form-text">
+          <div id="emailHelp" className="form-text">
             Never share your email & password with anyone else.
           </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             onChange={(e) => setTypingPassword(e.target.value)}
           />
@@ -49,7 +49,7 @@ export default function DashboardLogin() {
 
         <button
           type="submit"
-          class="btn btn-primary"
+          className="btn btn-primary"
           onClick={(e) => handleSubmit(e)}
         >
           Submit
