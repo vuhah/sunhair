@@ -8,11 +8,11 @@ export const deleteProductById = async (req, res) => {
 };
 
 export const getAllProducts = async (req, res) => {
-  // const products = await ProductServie.queryAllProducts();
-  // res.send(products);
-  res.send('hlod')
-  };
-
+  const products = await ProductServie.queryAllProducts();
+  console.log("object");
+  res.send(products);
+};
+ 
 export const getAllProductsSelected = async (req, res) => {
   const allProducts = await ProductServie.findProducts();
   const newAllProduct = [];
@@ -83,6 +83,6 @@ export const updateProduct = async (req, res) => {
   const newProduct = await ProductServie.updateProductById(id, data);
   console.log(newProduct);
   res.send(newProduct);
-}; 
+};
 
 export const uploadImages = async (req, res) => {};

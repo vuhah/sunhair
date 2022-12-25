@@ -12,7 +12,7 @@ export default function Store() {
     const getAllProducts = async () => {
       try {
         const res = await axios.get(
-          `https://sunhair-x98n.vercel.app/api/product/getProducts`,
+          `http://localhost:8000/api/product/getProducts`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
