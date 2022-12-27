@@ -1,0 +1,69 @@
+.searchcomponent {
+  z-index: 1;
+  .searchBarProduct {
+    background: #f5f5f5;
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+    border: 1px solid #e5c50b;
+    height: 44px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    .searchbar {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+    .search-button {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      background: #272727;
+      border-radius: 50px;
+      height: 100%;
+      .button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+      }
+    }
+  }
+  .dropdown-result-search {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 30px 30px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 22px;
+    left: 0px;
+    right: 0px;
+    max-height: 280px;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.3s; /* don't forget to set a duration! */
+    padding-top: 20px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+  }
+}
+.product-result {
+  .image {
+    width: 36px;
+    height: 48px;
+  }
+  border-bottom: 1px solid #f5f5f5;
+  .name-available {
+    .name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}

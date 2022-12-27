@@ -37,8 +37,9 @@
   }
   .slideshow2 {
     height: 600px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     .img1 {
       height: 300px;
     }

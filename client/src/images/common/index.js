@@ -5,7 +5,8 @@ import ExternalLink from "./external-link-alt-solid1.png"
 import FacebookIcon from "./facebook.png"
 import IgIcon from "./instagram.png"
 import WhatsappIcon from "./whatsapp.png"
-
+import SearchIcon from "./search.png"
+import ShoppingCart from "./shopping-cart.png"
 export {
     LogoRemoveBg,
     BrandRemoveBg,
@@ -13,6 +14,8 @@ export {
     ExternalLink,
     FacebookIcon,
     IgIcon,
-    WhatsappIcon
+    WhatsappIcon,
+    SearchIcon,
+    ShoppingCart
 }
 

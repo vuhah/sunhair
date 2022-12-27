@@ -2,7 +2,7 @@ import { BrandRemoveBg, ContactIcon } from "../images/common/index.js";
 import { NavLink } from "react-router-dom";
 
 export default function Header({ theme }) {
-  const backgroundColor = theme === "dark" ? "transparent" : "transparent";
+  const backgroundColor = theme === "dark" ? "transparent" : "#ffffff";
   const textColor = theme === "dark" ? "#fff" : "#000";
   return (
     <nav

@@ -1,4 +1,3 @@
-import Header from "../components/header";
 import { ImgSlide1, ImgSlide2 } from "../images/home/thumbnail";
 
 const Slide1 = () => {
@@ -41,6 +40,15 @@ const Slide2 = () => {
   );
 };
 
+// const Slide3 = () => {
+//   return (
+//     <div
+//       className="slideshow2"
+//       style={{ backgroundImage: `url(${ImgSlide3})` }}
+//     ></div>
+//   );
+// };
+
 export default function Thumbnail() {
   return (
     <div
@@ -48,8 +56,6 @@ export default function Thumbnail() {
       className="carousel slidesection1 pb-2"
       data-bs-ride="carousel"
     >
-      <Header theme={"dark"} />
-
       <div className="carousel-indicators">
         <button
           type="button"
@@ -80,7 +86,9 @@ export default function Thumbnail() {
           <Slide2 />
         </div>
         {/* <div className="carousel-item">
-          <Slide1 />
+        <Header theme={"light"} />
+
+          <Slide3 />
         </div> */}
       </div>
       <button

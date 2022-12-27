@@ -38,7 +38,7 @@ export default function Store() {
     <div className="store ps-3">
       <h1>STORE</h1>
       <div className="container mt-3 mb-3">
-        <div className="row header pb-3 mb-1">
+        <div className="row header-store pb-3 mb-1">
           <div className="col-1">NAME</div>
           <div className="col-1">CATEGORY</div>
           <div className="col-1">AVAILABLE</div>

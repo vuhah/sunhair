@@ -13,13 +13,13 @@ export const productPathSlice = createSlice({
       state.currentProducts = action.payload.products;
     },
     newCategory: (state, action) => {
-      state.path = "HOME / " + action.payload.path.toUpperCase() + " /";
+      state.path = "HOME  /  " + action.payload.path.toUpperCase() + " / ";
       state.currentProducts = state.initialProducts.filter(
         (ele) => ele.category === action.payload.codepath
       );
     },
     returnRootPath: (state) => {
-      state.path = "HOME /";
+      state.path = "HOME /  ";
       state.currentProducts = state.initialProducts;
     },
   },

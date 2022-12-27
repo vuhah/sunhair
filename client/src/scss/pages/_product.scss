@@ -2,47 +2,113 @@
   font-family: "Yaldevi";
 
   .header {
-    top: 28px !important;
-    .nav-link{
-      font-size:13px !important;
+    top: 40px !important;
+    .nav-link {
+      font-size: 13px !important;
     }
   }
-  .path-cart {
-    margin-top: 80px;
+  .path-search-cart {
+    margin-top: 88px;
+    z-index: 1;
     .path {
       font-weight: 500;
       font-size: 12px;
       line-height: 13px;
-      color: rgb(0, 0, 0);
+      color: #735e17;
+    }
+    .search {
+      width: 80%;
     }
   }
-  .categories {
-    .title {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 23px;
-    }
-    .category {
-      cursor: pointer;
-      display: block;
-      padding: 0;
-      outline: none;
-      border: none;
-      background-color: transparent;
-      font-size:12px;
-      font-weight: 500;
-      &:hover{
-        font-size: 13px;
-        transition-duration: 0.3s;
+  .category-product {
+    margin-top: 50px;
+    .categories {
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 23px;
       }
+      .option-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        transition: all 0.15s ease-out 0s;
+        background: #cbd1d8;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+      }
+      .option-input:hover {
+        background: #b7b79f;
+      }
+      .option-input:checked {
+        background: #ffdf27;
+      }
+      .option-input:checked::before {
+        width: 12px;
+        height: 12px;
+        display: flex;
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        font-family: "Font Awesome 5 Free";
+      }
+      .option-input:checked::after {
+        -webkit-animation: click-wave 0.65s;
+        -moz-animation: click-wave 0.65s;
+        animation: click-wave 0.65s;
+        background: #a89d37;
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 100;
+      }
+      .option-input.radio {
+        border-radius: 50%;
+      }
+      .option-input.radio::after {
+        border-radius: 50%;
+      }
+
+      @keyframes click-wave {
+        0% {
+          height: 40px;
+          width: 40px;
+          opacity: 0.35;
+          position: relative;
+        }
+        100% {
+          height: 80px;
+          width: 80px;
+          margin-left: -50px;
+          margin-top: -40px;
+          opacity: 0;
+        }
+      }
+      
     }
-  }
-  .products{
-    max-height: 1200px;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      width: 6px;
-      background-color: transparent;
+    .products {
+      max-height: 1200px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+        background-color: transparent;
+      }
     }
   }
 }

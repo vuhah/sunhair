@@ -62,7 +62,7 @@ function OurProducts() {
           </div>
         </main>
         <div className="text-center pb-3">
-          <a className=" link" href="/">
+          <a className=" link" href="/product">
             See all &ensp;
             <img src={ExternalLink} alt="" />
           </a>

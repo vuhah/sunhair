@@ -1,16 +1,23 @@
 import axios from "axios";
-import { useEffect} from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/header";
 import TopEvent from "../components/topEvent";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setInitialProducts,
   newCategory,
+  returnRootPath,
 } from "../redux/productPathSlice";
-
 import CardProps from "../components/card";
+import RefTab from "../components/refTab";
+import SearchBarProduct from "../components/searchBarProduct";
+import { CartIcon } from "../components/cart";
 
 const categories = [
+  {
+    nameCate: "ALL PRODUCTS",
+    codepath: "all",
+  },
   {
     nameCate: "WEFT HAIR",
     codepath: "weft",
@@ -49,40 +56,31 @@ const categories = [
   },
 ];
 
-function arrayBufferToBase64(Arraybuffer) {
-  let binary = "";
-  const bytes = new Uint8Array(Arraybuffer);
-  const len = bytes.byteLength;
-  for (let i = 0; i < len; i++) {
-    binary += String.fromCharCode(bytes[i]);
-  }
-  const file = window.btoa(binary);
-  return file;
-}
-
 export default function Product() {
   const currentPath = useSelector((state) => state.productPath.path);
   const currentProducts = useSelector(
     (state) => state.productPath.currentProducts
   );
+  const [currentCheckBoxCategory, setCurrentCheckBoxCategory] =
+    useState("ALL PRODUCTS");
   const dispatch = useDispatch();
 
   useEffect(() => {
     const getAllProducts = async () => {
       try {
         const res = await axios.get(
-          `https://sunhair-x98n.vercel.app/api/product/getProducts`
+          `https://sunhair-x98n.vercel.app/api/product/getProductsSelected`
         );
         const productInfor = [];
 
         for (const product of res.data) {
-          const base64 = arrayBufferToBase64(product.images[0].data.data);
+          // const base64 = arrayBufferToBase64(product.image.data);
           productInfor.push({
             id: product.id,
             name: product.name,
             images: {
-              filename: product.images[0].name,
-              data: "data:image/png;base64," + base64,
+              filename: product.images.filename.name,
+              data: "data:image/png;base64," + product.images.data,
             },
             category: product.category,
             available: product.available,
@@ -98,8 +96,13 @@ export default function Product() {
   }, []);
 
   function handleChooseCategory(e, nameCate, codepath) {
-    e.preventDefault();
-    dispatch(newCategory({ path: nameCate, codepath: codepath }));
+    setCurrentCheckBoxCategory(e.target.value);
+    if (codepath !== "all") {
+      dispatch(newCategory({ path: nameCate, codepath: codepath }));
+    } else {
+      dispatch(returnRootPath({}));
+    }
+    setCurrentCheckBoxCategory(e.target.value);
   }
 
   return (
@@ -107,31 +110,56 @@ export default function Product() {
       <TopEvent />
       <div className="product container">
         <Header className="header" />
-        <div className="row justify-content-around path-cart">
-          <div className="col-9 path">{currentPath}</div>
-          <div className="col-3 cartIcon">
-            <p className="float-end">CART</p>
+
+        <div className="row justify-content-around align-items-center path-search-cart">
+          <div className="col-3 path">{currentPath}</div>
+          <div className="col-4 offset-1">
+            <SearchBarProduct className="search" />
+          </div>
+          <div className="col-3 offset-1 cartIcon">
+            <div className="float-end">
+              <CartIcon/>
+            </div>
           </div>
         </div>
 
-        <div className="row mt-5">
+        <div className="row category-product">
           <div className="col-3 categories">
-            <p className="title">CATEGORIES</p>
-            {categories.map((category, index) => (
-              <button
-                className="category mt-5"
-                key={index}
-                onClick={(e) =>
-                  handleChooseCategory(e, category.nameCate, category.codepath)
-                }
-              >
-                {category.nameCate}
-              </button>
-            ))}
+            <p className="title mb-5">CATEGORIES</p>
+            <form>
+              {categories.map((category, index) => (
+                <div key={index} className="mt-4">
+                  <label>
+                    <input
+                      className="option-input radio"
+                      type="radio"
+                      name="category"
+                      id={category.nameCate}
+                      value={category.nameCate}
+                      checked={currentCheckBoxCategory === category.nameCate}
+                      onChange={(e) =>
+                        handleChooseCategory(
+                          e,
+                          category.nameCate,
+                          category.codepath
+                        )
+                      }
+                    />
+                    {category.nameCate}
+                  </label>
+                </div>
+              ))}
+            </form>
           </div>
+
           <div className="col-9">
-            <div className="container-fluid m-0">
-              <div className="row justify-content-between products">
+            <div className="d-block container-fluid">
+              <div className="row">
+                <div className="col-12">
+                  <p className="float-end">SORT</p>
+                </div>
+              </div>
+              <div className="row justify-content-between products mt-5">
                 {currentProducts.map((ele, index) => (
                   <div key={index} className="col-4">
                     <CardProps
@@ -146,6 +174,7 @@ export default function Product() {
           </div>
         </div>
       </div>
+      <RefTab />
     </>
   );
 }
