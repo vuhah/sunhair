@@ -6,11 +6,12 @@ import ProductDetail from "./pages/productdetail";
 import BlogDetail from "./pages/blogdetail";
 import Dashboard from "./pages/dashboard";
 import DashboardLogin from "./pages/dashboardLogin";
-
 import HomePanel from "./layouts/homePanel";
-import CompanyInformation from "./layouts/companyInfo";
+import OrderList from "./layouts/orderlist";
 import Store from "./layouts/store";
 import Event from "./layouts/events";
+import Orders from "./pages/order";
+import Completed from "./pages/completed";
 
 function App() {
   return (
@@ -24,12 +25,14 @@ function App() {
         <Route path="home" element={<HomePanel />}></Route>
         <Route path="store" element={<Store />}></Route>
         <Route
-          path="companyinformation"
-          element={<CompanyInformation />}
+          path="orderlist"
+          element={<OrderList />}
         ></Route>
         <Route path="event" element={<Event />}></Route>
       </Route>
       <Route path="/dashboard/login" element={<DashboardLogin />}></Route>
+      <Route path="/order" element={<Orders/>}></Route>
+      <Route path="/ordercompleted" element={<Completed/>}></Route>
       <Route path="*" element={<h1>No match</h1>}></Route>
     </Routes>
   );

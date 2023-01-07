@@ -7,6 +7,8 @@
     height: 36px;
     background: #d9d9d9;
     border-radius: 20px;
+    text-decoration: none;
+    color: black;
     &:hover {
       animation: tada; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 0.8s; /* don't forget to set a duration! */

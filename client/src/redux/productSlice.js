@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const productPathSlice = createSlice({
-  name: "productPath",
+export const productSlice = createSlice({
+  name: "product",
   initialState: {
     path: "HOME /",
     initialProducts: [],
@@ -22,9 +22,16 @@ export const productPathSlice = createSlice({
       state.path = "HOME /  ";
       state.currentProducts = state.initialProducts;
     },
+    setCurrentProductOrderly: (state, action) => {
+      state.currentProducts = action.payload.products;
+    },
   },
 });
 
-export const { setInitialProducts, returnRootPath, newCategory } =
-  productPathSlice.actions;
-export default productPathSlice.reducer;
+export const {
+  setInitialProducts,
+  returnRootPath,
+  newCategory,
+  setCurrentProductOrderly,
+} = productSlice.actions;
+export default productSlice.reducer;

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../components/header";
 import TopEvent from "../components/topEvent";
@@ -7,60 +6,20 @@ import {
   setInitialProducts,
   newCategory,
   returnRootPath,
-} from "../redux/productPathSlice";
+} from "../redux/productSlice";
 import CardProps from "../components/card";
 import RefTab from "../components/refTab";
 import SearchBarProduct from "../components/searchBarProduct";
 import { CartIcon } from "../components/cart";
-
-const categories = [
-  {
-    nameCate: "ALL PRODUCTS",
-    codepath: "all",
-  },
-  {
-    nameCate: "WEFT HAIR",
-    codepath: "weft",
-  },
-  {
-    nameCate: "BULK HAIR",
-    codepath: "bulk",
-  },
-  {
-    nameCate: "KERATIN HAIR",
-    codepath: "keratin",
-  },
-  {
-    nameCate: "CLOSURE",
-    codepath: "closure",
-  },
-  {
-    nameCate: "CLIP IN",
-    codepath: "clip",
-  },
-  {
-    nameCate: "FRONTAL",
-    codepath: "frontal",
-  },
-  {
-    nameCate: "WIGS HAIR",
-    codepath: "wigs",
-  },
-  {
-    nameCate: "TAPE HAIR",
-    codepath: "tape",
-  },
-  {
-    nameCate: "RAW HAIR",
-    codepath: "raw",
-  },
-];
+import categoryMap from "../constant/categoryCode";
+import axiosInstance from "../config/axiosConfig";
+import Footer from "../components/footer";
+import DropdownSortOrderly from "../components/dropdownSortOrderly";
+import { Link } from "react-router-dom";
 
 export default function Product() {
-  const currentPath = useSelector((state) => state.productPath.path);
-  const currentProducts = useSelector(
-    (state) => state.productPath.currentProducts
-  );
+  const currentPath = useSelector((state) => state.product.path);
+  const currentProducts = useSelector((state) => state.product.currentProducts);
   const [currentCheckBoxCategory, setCurrentCheckBoxCategory] =
     useState("ALL PRODUCTS");
   const dispatch = useDispatch();
@@ -68,30 +27,15 @@ export default function Product() {
   useEffect(() => {
     const getAllProducts = async () => {
       try {
-        const res = await axios.get(
-          `https://sunhair-x98n.vercel.app/api/product/getProductsSelected`
-        );
-        const productInfor = [];
-
-        for (const product of res.data) {
-          // const base64 = arrayBufferToBase64(product.image.data);
-          productInfor.push({
-            id: product.id,
-            name: product.name,
-            images: {
-              filename: product.images.filename.name,
-              data: "data:image/png;base64," + product.images.data,
-            },
-            category: product.category,
-            available: product.available,
-          });
-        }
-        dispatch(setInitialProducts({ products: productInfor }));
+        const res = await axiosInstance({
+          url: "product/getProductsSelected/",
+          method: "GET",
+        });
+        dispatch(setInitialProducts({ products: res.data }));
       } catch (err) {
         console.log(err);
       }
     };
-
     getAllProducts();
   }, []);
 
@@ -110,7 +54,6 @@ export default function Product() {
       <TopEvent />
       <div className="product container">
         <Header className="header" />
-
         <div className="row justify-content-around align-items-center path-search-cart">
           <div className="col-3 path">{currentPath}</div>
           <div className="col-4 offset-1">
@@ -118,34 +61,42 @@ export default function Product() {
           </div>
           <div className="col-3 offset-1 cartIcon">
             <div className="float-end">
-              <CartIcon/>
+              <Link to="/order">
+                <CartIcon />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="row align-items-center mt-5">
+          <div className="col-3">
+            <p className="title">CATEGORIES</p>
+          </div>
+          <div className="col-9">
+            <div className="float-end">
+              <DropdownSortOrderly className="float-end" />
             </div>
           </div>
         </div>
 
         <div className="row category-product">
-          <div className="col-3 categories">
-            <p className="title mb-5">CATEGORIES</p>
+          <div className="col-3 categories pt-1">
             <form>
-              {categories.map((category, index) => (
-                <div key={index} className="mt-4">
+              {Array.from(categoryMap).map((category, index) => (
+                <div key={index} className="mb-4">
                   <label>
                     <input
                       className="option-input radio"
                       type="radio"
                       name="category"
-                      id={category.nameCate}
-                      value={category.nameCate}
-                      checked={currentCheckBoxCategory === category.nameCate}
+                      id={category[1]}
+                      value={category[1]}
+                      checked={currentCheckBoxCategory === category[1]}
                       onChange={(e) =>
-                        handleChooseCategory(
-                          e,
-                          category.nameCate,
-                          category.codepath
-                        )
+                        handleChooseCategory(e, category[1], category[0])
                       }
                     />
-                    {category.nameCate}
+                    {category[1]}
                   </label>
                 </div>
               ))}
@@ -154,18 +105,14 @@ export default function Product() {
 
           <div className="col-9">
             <div className="d-block container-fluid">
-              <div className="row">
-                <div className="col-12">
-                  <p className="float-end">SORT</p>
-                </div>
-              </div>
-              <div className="row justify-content-between products mt-5">
+              <div className="row justify-content-between products">
                 {currentProducts.map((ele, index) => (
                   <div key={index} className="col-4">
                     <CardProps
+                      id={ele.id}
                       name={ele.name}
-                      category={ele.category}
-                      src={ele.images.data}
+                      category={categoryMap.get(ele.category)}
+                      src={ele.images}
                     />
                   </div>
                 ))}
@@ -175,6 +122,7 @@ export default function Product() {
         </div>
       </div>
       <RefTab />
+      <Footer />
     </>
   );
 }

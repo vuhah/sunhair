@@ -21,6 +21,7 @@
 @import "./layouts/sidebar";
 @import "./layouts/homepanel";
 @import "./layouts/store";
+@import "./layouts/orderlist";
 
 // components/
 @import "./components/button.scss";
@@ -32,6 +33,7 @@
 @import "./components/cardProduct";
 @import './components/searchbarproduct';
 @import "./components/carticon";
+@import "./components/sortDropdown";
 
 // pages/
 @import "./pages/home";
@@ -39,4 +41,6 @@
 @import "./pages/productdetail";
 @import "./pages/blog";
 @import "./pages/blogdetail";
-@import "./pages/dashboard"
+@import "./pages/dashboard";
+@import "./pages/order";
+@import "./pages/completed";

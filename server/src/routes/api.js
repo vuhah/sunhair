@@ -1,12 +1,13 @@
 import { Router } from "express";
-import test from "./test.router.js";
 import product from "./products.router.js"
+import order from "./order.router.js"
+
 const api = Router()
 
-api.use('/test',test)
+api.use('/order',order)
 api.use('/product',product)
 
 api.get('/hello',(req,res)=>{
-    res.send("hello")
+    res.send("hello Sunhair")
 })
 export default api  

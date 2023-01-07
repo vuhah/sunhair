@@ -20,14 +20,13 @@
       width: 80%;
     }
   }
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+  }
   .category-product {
-    margin-top: 50px;
+    margin-top: 40px;
     .categories {
-      .title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 23px;
-      }
       .option-input {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -100,10 +99,10 @@
           opacity: 0;
         }
       }
-      
     }
     .products {
-      max-height: 1200px;
+      max-height: 10  40px;
+      min-height: 800px;
       overflow: auto;
       &::-webkit-scrollbar {
         width: 6px;

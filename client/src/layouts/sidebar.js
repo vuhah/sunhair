@@ -25,9 +25,9 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/dashboard/companyinformation" className="d-flex align-items-center link">
+          <Link to="/dashboard/orderlist" className="d-flex align-items-center link">
             <img src={CompanyInformation} alt="" className="icon"/>
-            <p className="d-inline-block link-text ms-4">Company Information</p>
+            <p className="d-inline-block link-text ms-4">Orders</p>
           </Link>
         </li>
         <li>

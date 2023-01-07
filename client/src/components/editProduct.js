@@ -1,79 +1,83 @@
 import { useState } from "react";
-import axios from "axios";
-// import { useEffect } from "react";
 import Popup from "reactjs-popup";
+import axiosInstance from "../config/axiosConfig";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import storage from "../config/firebaseConfig";
+
+const uploadImage = async (path, file) => {
+  return new Promise((resolve, reject) => {
+    const storageRef = ref(storage, path);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {},
+      (error) => {
+        console.log(error);
+        reject(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          resolve(downloadURL);
+        });
+      }
+    );
+  });
+};
 
 export default function EditProductPanel({ product, trigger }) {
-  const [files, setFiles] = useState(product.images);
-  const [name, setName] = useState(product.name);
-  const [category, setCategory] = useState(product.category);
-  const [information, setInformation] = useState(product.information);
-  const [definition, setDefinition] = useState(product.definition);
-  const [characteristics, setCharacteristics] = useState(
-    product.characteristics
-  );
-  const [instructionManual, setInstructionManual] = useState(
-    product.instructionManual
-  );
-  const [available, setAvailble] = useState(product.available);
+  const [data, setData] = useState(product);
+  const [files, setFiles] = useState();
 
-  function handleSend(e) {
+  async function handleUpdate(e) {
     e.preventDefault();
 
-    const formData = new FormData();
-
-    for (const [key, value] of Object.entries(files)) {
-      formData.append(key, value);
+    async function storeImage() {
+      const imagesURL = [];
+      for (let i = 0; i < files.length; i++) {
+        const path = `products/${data.name}/${i}`;
+        const downloadURL = await uploadImage(path, files[i]);
+        imagesURL.push(downloadURL);
+      }
+      return imagesURL;
     }
 
-    formData.append("name", name);
-    formData.append("category", category);
-    formData.append("information", information);
-    formData.append("definition", definition);
-    formData.append("characteristics", characteristics);
-    formData.append("instructionManual", instructionManual);
-    formData.append("available", available);
+    async function updateProduct() {
+      let payload = data
+      if (files !== undefined) {
+        const imagesURL = await storeImage();
+        payload = Object.assign(data, { images: imagesURL });
+      }
 
-    async function send() {
       try {
-        const res = await axios.post(
-          `https://sunhair-x98n.vercel.app/api/product/update/${product._id}`,
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        console.log(res);
+        const res = await axiosInstance({
+          url: `product/update`,
+          method: "POST",
+          data: payload,
+        });
+        console.log(res.data);
         trigger((prev) => !prev);
       } catch (err) {
         console.log(err);
       }
     }
-    send();
+    updateProduct();
   }
 
-  function handleDelete(e) {
+  async function handleDelete(e) {
     e.preventDefault();
-    async function deleteProduct(id) {
-      try {
-        const res = await axios.post(
-          `https://sunhair-x98n.vercel.app/api/product/delete/${product._id}`,
-          {
-            id: id,
-          }
-        );
-        console.log(res);
-        trigger((prev) => !prev);
-        
-      } catch (err) {
-        console.log(err);
-      }
+    try {
+      const res = await axiosInstance({
+        url: `product/delete/${product._id}`,
+        method: "POST",
+      });
+      console.log(res);
+      trigger((prev) => !prev);
+    } catch (err) {
+      console.log(err);
     }
-
-    deleteProduct(product.id);
   }
+
   return (
     <Popup
       trigger={<button className="button-editItem">EDIT</button>}
@@ -81,7 +85,7 @@ export default function EditProductPanel({ product, trigger }) {
       nested
     >
       {(close) => (
-        <div className="editItem  container bg-white">
+        <div className="editItem container bg-white">
           <h1>EDIT ITEM</h1>
 
           <button className="close" onClick={close}>
@@ -94,19 +98,26 @@ export default function EditProductPanel({ product, trigger }) {
             </label>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={data.name}
+              onChange={(e) =>
+                setData((prevData) => ({ ...prevData, name: e.target.value }))
+              }
               className="col-9"
             ></input>
           </div>
 
-          <div className="row align-items-center mt-2">
+          <div className="row align-items-center mt-1">
             <label htmlFor="name" className="col-2">
               Category
             </label>
             <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              value={data.category}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  category: e.target.value,
+                }))
+              }
               className="col-9"
             >
               <option value="weft">WEFT HAIR</option>
@@ -121,68 +132,115 @@ export default function EditProductPanel({ product, trigger }) {
             </select>
           </div>
 
-          <div className="row align-items-center mt-2">
+          <div className="row align-items-center mt-1">
             <label htmlFor="name" className="col-2">
               Information
             </label>
             <textarea
               type="text"
-              value={information}
-              onChange={(e) => setInformation(e.target.value)}
+              value={data.information}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  information: e.target.value,
+                }))
+              }
               className="col-9"
             ></textarea>
           </div>
 
-          <div className="row align-items-center mt-2">
+          <div className="row align-items-center mt-1">
             <label htmlFor="name" className="col-2">
               Definition
             </label>
             <textarea
               type="text"
-              value={definition}
-              onChange={(e) => setDefinition(e.target.value)}
+              value={data.definition}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  definition: e.target.value,
+                }))
+              }
               className="col-9"
             ></textarea>
           </div>
 
-          <div className="row align-items-center mt-2">
+          <div className="row align-items-center mt-1">
             <label htmlFor="name" className="col-2">
               Characteristics
             </label>
             <textarea
               type="text"
-              value={characteristics}
+              value={data.characteristics}
               className="col-9"
-              onChange={(e) => setCharacteristics(e.target.value)}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  characteristics: e.target.value,
+                }))
+              }
             ></textarea>
           </div>
 
-          <div className="row align-items-center mt-2">
+          <div className="row align-items-center mt-1">
             <label htmlFor="name" className="col-2">
               InstructionManual
             </label>
             <textarea
               type="text"
-              value={instructionManual}
+              value={data.instructionManual}
               className="col-9"
-              onChange={(e) => setInstructionManual(e.target.value)}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  instructionManual: e.target.value,
+                }))
+              }
             ></textarea>
           </div>
 
-          <div className="d-flex align-items-center mt-2">
-            <label htmlFor="checkox" className="">
+          <div className="row align-items-center mt-1">
+            <label htmlFor="name" className="col-2">
+              Selling index
+            </label>
+            <input
+              type="number"
+              value={data.selling}
+              className="col-9"
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  selling: e.target.value,
+                }))
+              }
+            ></input>
+          </div>
+
+          <div className="d-flex align-items-center mt-3">
+            <label htmlFor="checkox" className="me-5">
               Available
             </label>
             <input
               type="checkbox"
               className="checkbox"
               id="checkox"
-              value={available}
-              onChange={(e) => setAvailble(e.target.checked)}
+              value={data.available}
+              onChange={(e) =>
+                setData((prevData) => ({
+                  ...prevData,
+                  available: e.target.value,
+                }))
+              }
             ></input>
           </div>
 
-
+          <div className="d-flex align-items-center mt-4">
+            <p className="me-5">Current images</p>
+            {product.images.map((image, index) => (
+              <img key={index} className="img ms-4" src={image} />
+            ))}
+          </div>
 
           <input
             className="form-control mt-2"
@@ -193,9 +251,10 @@ export default function EditProductPanel({ product, trigger }) {
           />
 
           <div className="col-12 text-center mt-5">
-            <button className="button me-2" onClick={(e) => handleSend(e)}>
+            <button className="button me-2" onClick={(e) => handleUpdate(e)}>
               SAVE
             </button>
+
             <button
               className="button-delete ms-2"
               onClick={(e) => handleDelete(e)}

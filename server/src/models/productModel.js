@@ -8,12 +8,7 @@ const products = mongoose.Schema({
   category: {
     type: String,
   },
-  images: [
-    {
-      name: String,
-      data: Buffer,
-    },
-  ],
+  images: [{type: String}],
   information: {
     type: String,
   },
@@ -29,6 +24,9 @@ const products = mongoose.Schema({
   available: {
     type: Boolean,
   },
-});
-
+  selling:{
+    type: Number
+  }
+});  
+  
 export const productDB = mongoose.model("products", products);

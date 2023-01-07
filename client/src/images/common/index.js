@@ -7,6 +7,8 @@ import IgIcon from "./instagram.png"
 import WhatsappIcon from "./whatsapp.png"
 import SearchIcon from "./search.png"
 import ShoppingCart from "./shopping-cart.png"
+import DownArrow from "./down-arrow.png"
+
 export {
     LogoRemoveBg,
     BrandRemoveBg,
@@ -16,6 +18,7 @@ export {
     IgIcon,
     WhatsappIcon,
     SearchIcon,
-    ShoppingCart
+    ShoppingCart,
+    DownArrow
 }
 

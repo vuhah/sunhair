@@ -1,6 +1,6 @@
 import authReducer from "./authSlice";
 import cartReducer from "./cartSlice";
-import productPathReducer from "./productPathSlice";
+import productReducer from "./productSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -8,6 +8,6 @@ export default configureStore({
   reducer: {
     auth: authReducer,
     cart: cartReducer,
-    productPath: productPathReducer,
+    product: productReducer,
   },
 });

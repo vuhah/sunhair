@@ -1,8 +1,8 @@
 import AddProductPanel from "../components/addProduct";
 import EditProductPanel from "../components/editProduct";
-
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from "../config/axiosConfig";
+
 
 export default function Store() {
   const [products, setProducts] = useState([]);
@@ -11,21 +11,11 @@ export default function Store() {
   useEffect(() => {
     const getAllProducts = async () => {
       try {
-        const res = await axios.get(
-          `https://sunhair-x98n.vercel.app/api/product/getProducts`,
-          {
-            headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        
+        const res = await axiosInstance({
+          url:"product/getProducts/",
+          method:"GET"
+        })
         const products = res.data;
-
-        console.log(products);
-
         setProducts(products);
       } catch (err) {
         console.log(err);

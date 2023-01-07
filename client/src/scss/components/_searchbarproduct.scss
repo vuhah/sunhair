@@ -6,7 +6,7 @@
     z-index: 1;
     position: relative;
     border: 1px solid #e5c50b;
-    height: 44px;
+    height: 40px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     .icon {
       width: 20px;
@@ -35,7 +35,7 @@
   .dropdown-result-search {
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px 20px 20px;
     display: block;
     position: absolute;
     z-index: 0;
@@ -45,7 +45,7 @@
     max-height: 280px;
     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 0.3s; /* don't forget to set a duration! */
-    padding-top: 20px;
+    padding-top: 22px;
     overflow: auto;
     &::-webkit-scrollbar {
       width: 6px;
@@ -54,16 +54,24 @@
   }
 }
 .product-result {
-  .image {
-    width: 36px;
-    height: 48px;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    background-color: #dfdfdf;
+    transition-duration: 0.3s;
   }
-  border-bottom: 1px solid #f5f5f5;
+  .image {
+    width: 40px;
+    height: 48px;
+    border-radius: 5px;
+  }
+  border-bottom: 1px solid #c7c7c7;
   .name-available {
     .name {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       line-height: 15px;
+      font-family: 'Yaldevi';
     }
   }
 }

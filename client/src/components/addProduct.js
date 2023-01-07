@@ -1,57 +1,77 @@
 import { useState } from "react";
-import axios from "axios";
 import Popup from "reactjs-popup";
+import storage from "../config/firebaseConfig";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import axiosInstance from "../config/axiosConfig";
+
+const defaultData = {
+  name: "",
+  category: "weft",
+  information: "",
+  definition: "",
+  characteristics: "",
+  instructionManual: "",
+  available: true,
+  selling: 0,
+  images:[]
+};
+
+const uploadImage = async (path, file) => {
+  return new Promise((resolve, reject) => {
+    const storageRef = ref(storage, path);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {},
+      (error) => {
+        console.log(error);
+        reject(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          resolve(downloadURL);
+        });
+      }
+    );
+  });
+};
 
 export default function AddProductPanel({ addTrigger }) {
+  const [data, setData] = useState(defaultData);
   const [files, setFiles] = useState();
-  const [name, setName] = useState("");
-  const [category, setCategory] = useState("weft");
-  const [information, setInformation] = useState("");
-  const [definition, setDefinition] = useState("");
-  const [characteristics, setCharacteristics] = useState("");
-  const [instructionManual, setInstructionManual] = useState("");
-  const [available, setAvailble] = useState(false);
 
-  function handleSelectFile(e) {
-    e.preventDefault();
-    setFiles(e.target.files);
-  }
-
-  function handleSend(e) {
+  async function handleSend(e) {
     e.preventDefault();
 
-    const formData = new FormData();
+    async function storeImage() {
+      const imagesURL = [];
 
-    for (const [key, value] of Object.entries(files)) {
-      formData.append(key, value);
+      for (let i = 0; i < files.length; i++) {
+        const path = `products/${data.name}/${i}`;
+        const downloadURL = await uploadImage(path, files[i]);
+        imagesURL.push(downloadURL);
+      }
+      return imagesURL;
     }
 
-    formData.append("name", name);
-    formData.append("category", category);
-    formData.append("information", information);
-    formData.append("definition", definition);
-    formData.append("characteristics", characteristics);
-    formData.append("instructionManual", instructionManual);
-    formData.append("available", available);
-
-    async function send() {
+    async function createProductAPI() {
+      const imagesURL = await storeImage();
+      const payload = Object.assign(data, { images: imagesURL });
       try {
-        const res = await axios.post(
-          `https://sunhair-x98n.vercel.app/api/product/createProduct`,
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        console.log(res);
+        const res = await axiosInstance({
+          url: "product/createProduct/",
+          method: "POST",
+          data: payload,
+        });
         addTrigger((prev) => !prev);
+        return res;
       } catch (err) {
         console.log(err);
       }
     }
-    send();
+
+    const res = await createProductAPI();
   }
 
   return (
@@ -75,8 +95,10 @@ export default function AddProductPanel({ addTrigger }) {
               </label>
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={data.name}
+                onChange={(e) =>
+                  setData((prevData) => ({ ...prevData, name: e.target.value }))
+                }
                 className="col-9"
               ></input>
             </div>
@@ -86,8 +108,13 @@ export default function AddProductPanel({ addTrigger }) {
                 Category
               </label>
               <select
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
+                value={data.category}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    category: e.target.value,
+                  }))
+                }
                 className="col-9"
               >
                 <option value="weft">WEFT HAIR</option>
@@ -108,8 +135,13 @@ export default function AddProductPanel({ addTrigger }) {
               </label>
               <textarea
                 type="text"
-                value={information}
-                onChange={(e) => setInformation(e.target.value)}
+                value={data.information}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    information: e.target.value,
+                  }))
+                }
                 className="col-9"
               ></textarea>
             </div>
@@ -120,8 +152,13 @@ export default function AddProductPanel({ addTrigger }) {
               </label>
               <textarea
                 type="text"
-                value={definition}
-                onChange={(e) => setDefinition(e.target.value)}
+                value={data.definition}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    definition: e.target.value,
+                  }))
+                }
                 className="col-9"
               ></textarea>
             </div>
@@ -132,9 +169,14 @@ export default function AddProductPanel({ addTrigger }) {
               </label>
               <textarea
                 type="text"
-                value={characteristics}
+                value={data.characteristics}
                 className="col-9"
-                onChange={(e) => setCharacteristics(e.target.value)}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    characteristics: e.target.value,
+                  }))
+                }
               ></textarea>
             </div>
 
@@ -144,10 +186,32 @@ export default function AddProductPanel({ addTrigger }) {
               </label>
               <textarea
                 type="text"
-                value={instructionManual}
+                value={data.instructionManual}
                 className="col-9"
-                onChange={(e) => setInstructionManual(e.target.value)}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    instructionManual: e.target.value,
+                  }))
+                }
               ></textarea>
+            </div>
+
+            <div className="row align-items-center mt-1">
+              <label htmlFor="name" className="col-2">
+                Selling index
+              </label>
+              <input
+                type="number"
+                value={data.selling}
+                className="col-9"
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    selling: e.target.value,
+                  }))
+                }
+              ></input>
             </div>
 
             <div className="d-flex align-items-center">
@@ -158,8 +222,13 @@ export default function AddProductPanel({ addTrigger }) {
                 type="checkbox"
                 className="checkbox"
                 id="checkox"
-                value={available}
-                onChange={(e) => setAvailble(e.target.checked)}
+                value={data.available}
+                onChange={(e) =>
+                  setData((prevData) => ({
+                    ...prevData,
+                    available: e.target.value,
+                  }))
+                }
               ></input>
             </div>
 
@@ -168,7 +237,7 @@ export default function AddProductPanel({ addTrigger }) {
               type="file"
               id="formFile"
               multiple
-              onChange={(e) => handleSelectFile(e)}
+              onChange={(e) => setFiles(e.target.files)}
             />
 
             <div className="col-12 text-center mt-5">

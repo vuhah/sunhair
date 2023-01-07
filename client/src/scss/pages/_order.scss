@@ -1,0 +1,240 @@
+.orderpage {
+  .content {
+    height: 100vh;
+    .header {
+      font-family: "Quicksand", sans-serif;
+      margin-top: 2%;
+      .brand {
+        height: 33px;
+      }
+      .backShopping {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        font-family: "Quicksand", sans-serif;
+      }
+      .bag {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .summary {
+      margin-top: 5%;
+      padding-left: 40px;
+      h1 {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Quicksand", sans-serif;
+      }
+      p {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+      }
+    }
+    .checkout {
+      padding-left: 30px;
+      padding-right: 30px;
+      .header {
+        margin-top: 5%;
+        .backShopping {
+          cursor: pointer;
+          color: #000000;
+        }
+        .numofitem {
+          cursor: pointer;
+          p {
+            font-family: "Quicksand", sans-serif;
+            text-decoration: none !important;
+            font-weight: 600;
+            font-size: 12px;
+          }
+        }
+      }
+      .title {
+        margin-top: 5%;
+        h1 {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 600;
+          font-size: 24px;
+        }
+      }
+      .name {
+        margin-top: 5%;
+        width: 100%;
+        .firstname {
+          width: 55%;
+        }
+        .lastname {
+          width: 45%;
+          float: end;
+        }
+        .namefield {
+          width: 100%;
+        }
+        .namefield-firstname{
+          width: 80%;
+        }
+      }
+      .field {
+        width: 100%;
+        margin-top: 4%;
+      }
+      .order {
+        margin-top: 2%;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 5%;
+        padding-left: 5%;
+        min-height: 15vh;
+        p{
+          font-family: "Quicksand", sans-serif;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+      .inputtitle {
+        margin-bottom: 1%;
+        font-family: "Quicksand", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .inputfield {
+        border: 0.5px solid #b3b3b3;
+        border-radius: 10px;
+        height: 42px;
+        padding-left: 18px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        color: #000000;
+        width: 100%;
+      }
+    }
+    .ordertable {
+      margin-top: 3%;
+      width: 90%;
+      height: 68vh;
+      background: rgba(255, 255, 255, 0.952);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      .header {
+        h1 {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          color: #000000;
+        }
+        border-bottom: 0.5px solid rgb(162, 162, 162);
+      }
+      .listproduct {
+        height: 84%;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: transparent;
+        }
+        .product {
+          .img {
+            width: 50px;
+            height: 68px;
+            border-radius: 5px;
+          }
+          .iconweight {
+            width: 20px;
+            height: 20px;
+          }
+          h1 {
+            font-weight: 600;
+            font-size: 13px;
+            font-family: "Quicksand", sans-serif;
+            margin-bottom: 4px;
+          }
+          h2 {
+            font-family: "Yaldevi", sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+          }
+          p {
+            font-weight: 600;
+            font-size: 12px;
+            font-family: "Quicksand", sans-serif;
+          }
+          .weight {
+            margin-top: -4px;
+          }
+        }
+      }
+      .total {
+        border-top: 0.5px solid #000000;
+        h1 {
+          font-family: "Quicksand", sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          color: #000000;
+        }
+      }
+    }
+    .continueorder {
+      margin-top: 4%;
+      button {
+        width: 240px;
+        height: 34px;
+        background: #1e1e1e;
+        border-radius: 10px;
+        p {
+          font-weight: 00;
+          font-size: 12px;
+          line-height: 15px;
+          color: #ffffff;
+        }
+      }
+    }
+    .process {
+      margin-top: 3%;
+      .number {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #d9d9d9;
+        background-size: cover;
+        
+        p {
+          font-size: 12px;
+        }
+      }
+      .processname {
+        font-size: 12px;
+      }
+    }
+
+    .check-item {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+      background-size: cover;
+      background-color: #dddddd;
+      &-false {
+        background-color: #dddddd;
+      }
+    }
+  }
+  background-color: #e6e6e6cc;
+  height: 100vh;
+  .bgorder {
+    height: 100%;
+  }
+  .bgorder-img {
+    margin-top: 1%;
+    width: 99%;
+    height: 98%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+}

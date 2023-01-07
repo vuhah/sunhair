@@ -1,4 +1,22 @@
-function CardProps({ name, category, src }) {
+import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/cartSlice";
+import { Link } from "react-router-dom";
+function CardProps({ id, name, category, src }) {
+  const dispatch = useDispatch();
+
+  function handleAddItems(e) {
+    e.preventDefault();
+    dispatch(
+      addProduct({
+        productID: id,
+        weight: 100,
+        thumbnail: src,
+        name: name,
+        category: category,
+      })
+    );
+  }
+
   return (
     <div
       className="container-card mb-5"
@@ -7,7 +25,7 @@ function CardProps({ name, category, src }) {
       }}
     >
       <div className="overlay">
-        <div className="items"></div>
+        <div className="items">ddd</div>
         <div className="items head">
           <p>{name}</p>
           <hr />
@@ -18,7 +36,7 @@ function CardProps({ name, category, src }) {
         </div>
         <div className="items cart">
           <i className="fa fa-shopping-cart"></i>
-          <span>ADD TO CART</span>
+          <span onClick={(e) => handleAddItems(e)}>ADD TO CART</span>
         </div>
       </div>
     </div>

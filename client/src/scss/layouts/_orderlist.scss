@@ -1,0 +1,36 @@
+.orderlist {
+  .title {
+    margin-top: 2%;
+    font-size: 32px;
+  }
+  .header {
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+  }
+  .contentbody {
+    overflow: auto;
+    max-height: 80vh;
+    .body {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      &:nth-child(even) {
+        background-color: rgba(56, 56, 56, 0.568);
+      }
+      .order{
+        margin-bottom: 1%;
+      }
+      button {
+        padding: 4px;
+        background-color: white;
+        border-radius: 2px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}

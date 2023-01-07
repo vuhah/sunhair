@@ -2,13 +2,12 @@ import { SearchIcon } from "../images/common";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import React, { useRef, useEffect } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const ProductResult = ({ product }) => {
   return (
-    <div className="product-result mt-3 ms-3 mb-1 pb-3">
+    <div className="product-result ms-1 mt-1 pt-2 ps-4 pb-1  pb-3">
       <div className="d-flex align-items-center">
-        <img src={product.images.data} alt="" className="image" />
+        <img src={product.images} alt="" className="image me-1" />
         <div className="name-available ms-4">
           <div className="name">{product.name}</div>
           <div className="available mt-2">
@@ -22,13 +21,10 @@ const ProductResult = ({ product }) => {
 
 export default function SearchBarProduct() {
   const [typingSearch, setTypingSearch] = useState("");
-  const initialProducts = useSelector(
-    (state) => state.productPath.initialProducts
-  );
+  const initialProducts = useSelector(state => state.product.initialProducts);
   const [closeResult, setCloseResult] = useState(true);
 
   const wrapperRef = useRef(null);
-
   useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -54,7 +50,6 @@ export default function SearchBarProduct() {
     return product.name.toLowerCase().includes(typingSearch.toLowerCase());
   });
 
-  console.log(typingSearch, searchResult);
 
   return (
     <div className="position-relative searchcomponent" ref={wrapperRef}>

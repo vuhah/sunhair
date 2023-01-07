@@ -1,20 +1,22 @@
-.cart-icon{
-    position: relative;
-    .icon{
-        width: 36px;
-        height: 36px;
+.cart-icon {
+  position: relative;
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .quantity {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    p {
+      font-size: 11px;
     }
-    .quantity{
-        display: inline;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-color: black;
-        color: white;
-        border-radius: 50%;
-        padding: 2px;
-        font-size: 11px;
-        width: 16px;
-        height: 16px;
-    }
+  }
 }
