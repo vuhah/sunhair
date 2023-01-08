@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
+
 function CardProps({ id, name, category, src }) {
   const dispatch = useDispatch();
 
@@ -25,11 +26,11 @@ function CardProps({ id, name, category, src }) {
       }}
     >
       <div className="overlay">
-        <div className="items">ddd</div>
-        <div className="items head">
+        <div className="items"></div>
+        <Link to={`/product/${id}`} className="items head" >
           <p>{name}</p>
           <hr />
-        </div>
+        </Link>
         <div className="items price">
           {/* <p className="old">$699</p> */}
           <p className="new">{category}</p>

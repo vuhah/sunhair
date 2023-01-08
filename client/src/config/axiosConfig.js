@@ -6,7 +6,7 @@ const axiosInstance = axios.create({
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "*",
     "Content-Type": "application/json",
-    "Accept":"applicatio/json"
+    "Accept":"application/json"
   },
 });
 

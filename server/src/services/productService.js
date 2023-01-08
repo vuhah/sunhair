@@ -1,6 +1,11 @@
 import { productDB } from "../models/productModel.js";
 
 export class ProductServie {
+  
+  static getProduct = async(id) => {
+    const product = await productDB.findOne({_id: id})
+    return product
+  }
   static createProduct = async (body) => {
     const product = await productDB.create({
       name: body.name,

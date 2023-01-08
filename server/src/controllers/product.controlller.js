@@ -5,6 +5,12 @@ export const getAllProducts = async (req, res) => {
   res.send(products);
 };
 
+export const getProduct = async(req,res)=>{
+  console.log(req.body);
+  const product = await ProductServie.getProduct(req.body.id)
+  res.status(200).send({message:"OK", data:product})
+}
+
 export const getProductByIdSelected = async(req,res)=>{
   res.send("OK")
 }
@@ -20,11 +26,11 @@ export const getProductsSelected = async (req, res) => {
       category: product.category,
       available: product.available,
       selling: product.selling
-    });
-  }
+    }); 
+  } 
   console.log(newAllProduct);
   res.send(newAllProduct);
-};
+}; 
 
 export const createProduct = async (req, res) => {
   console.log(req.body);
