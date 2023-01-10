@@ -15,6 +15,7 @@ import Completed from "./pages/completed";
 import BlogDetail1 from "./pages/blogdetail1";
 import BlogDetail5 from "./pages/blogdetail5";
 import BlogDetail6 from "./pages/blogdetail6";
+import BlogDetail7 from "./pages/blogdetail7";
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
       ></Route>
       <Route
         path="blog/how-to-distinguish-human-hair-vs-synthetic-hair"
-        element={<BlogDetail />}
+        element={<BlogDetail7 />}
       ></Route>
       <Route
         path="blog/9-tricks-for-healthier-fully-looking-hair"

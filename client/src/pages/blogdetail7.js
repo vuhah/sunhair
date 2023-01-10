@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import Subcrice from "../layouts/subcribe";
 import { Vector1, Vector2, Vector3, Vector4 } from "../images/blog";
 
-export default function BlogDetail6() {
+export default function BlogDetail7() {
   return (
     <div className="showBlog">
       <Header />
@@ -25,8 +25,8 @@ export default function BlogDetail6() {
         style={{ backgroundImage: `url(${Vector1})` }}
       ></div>
 
-      <div className="container blockDetailPage6 mb-5">
-        <h1>Which are Vitamin hair growth need?</h1>
+      <div className="container blockDetailPage7 mb-5">
+        <h1>How to distinguish Human Hair Vs Synthetic Hair</h1>
         <div className="p1">October 12 - Sun Nguyen</div>
         <div className="detailTitle">
           Vitamins and supplements that promise hair growth almost sound too
@@ -186,7 +186,7 @@ export default function BlogDetail6() {
                 your hair health; Dr. Green notes that some oils, like rosemary
                 and coconut oil, may also help with hair growth. A study found
                 that consistent use of rosemary oil over several months led to
-                an increase in hair count].
+                an increase in hair count.
                 <br />
                 Meanwhile, another study that compared coconut oil to mineral
                 oil and sunflower oil found that coconut oil was the only one
