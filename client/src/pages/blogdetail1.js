@@ -33,33 +33,49 @@ export default function BlogDetail1() {
           <div className='titleHeading2'>What are the differences between body wave and loose wave</div>
           <div className='detailHeading2'>
             <div className='detailContent2'>Both these two hairstyles rock all women with their 100% virgin human hair materials without chemical treatments that bring them glamorous wavy patterns.
+<div className='stt'>
 <br></br>1. A body wave is less voluminous than a loose wave. Therefore, women who love bouncy curls will be dying for loose waves. 
 <br></br>2. In terms of strands, strands of body waves are more closely designed with less bouncy than loose waves. 
 <br></br>3. Body wave is the best choice for those who like soft curls.   
 <br></br>4. Some people prefer loose wave to body wave because it is more versatile in styling and better to hold the curls for long hours.
 <br></br>5. If you’re a lover of straight hair, surely you will not like loose wave hair due to its bigger curls. 
 <br></br>6. Body wave hair is easier to lose curl and turn straight over time due to frequent washing than loose wave hair. 
+</div>
       <br></br>When our readers reach here, maybe some wonder what hairstyle suits them. The answer comes from your experience, just trying them because each has pros and cons. Despite their differences in style and other minor aspects, both help add value to your natural hair. Sometimes, it depends on events or occasions to choose which type. It’s up to you as long as you feel confident wearing it. If you have appropriate care, curly hair extensions can keep a good shape.
 </div>
           </div>
         </div>
 
         <div className="section3">
-          <div className='titleHeading3'>What to consider when sleeping with hair extensions</div>
+          <div className='titleHeading3'>Body wave and loose wave hair at Sun Hair</div>
           <div className='detailHeading3'>
+          <div className='detailContent3'>With their outstanding characteristics, loose wave and body wave hair are famous among every charming lady in the beauty world. For many women, the first thing to do after waking up is to care for and style their hair. However, styling your natural hair in loose or body wave hairstyles every morning wastes much time. Even though you can’t reach the curls that you desire. Therefore, loose wave and body wave hair extensions are the best choices. But where to buy beautiful hair without shedding and tangling?       
+<br></br>Sun Hair is honored to provide you with a loose wave and body wave featuring 100% virgin human hair and various colors.
+</div>
             <div className='blockContent3'>
-              <div className='titleBlock3'>1. Never sleep with wet hair extensions</div>
-              <div className='contentBlock3'>Wet hair tends to get tangled up easier and can become a mess in the morning, which takes hours and hours to detangle. So before braiding your hair or wrapping it in a scarf, make sure the hair is dehydrated. If you can not wait for it to air dry, use a blow-dryer at low to medium temperature. </div>
+              <div className='titleBlock3'>Our loose wave</div>
+              <div className='contentBlock3'>The hair has small and tight curls, but it’s not too tight 
+              <ul className='a'>
+<li>Made from high-quality virgin hair, loose wave bundles have a high luster and perfect shine </li>
+<li>You can color in any tone </li>
+<li>We don’t need tools to style because our workers make perfect defined curls that are hard to loosen</li>
+</ul>
+</div>
             </div>
             <div className='blockContent3'>
-              <div className='titleBlock3'>2. A tight ponytail or braid hurts.</div>
-              <div className='contentBlock3'>Use a snag-free hair band and tie your hair just enough to keep it in place. If you connect your hair or braid it too tight, it can cause tension and damage to your scalp and a discomfortable feeling. </div>
+              <div className='titleBlock3'>Our body wave </div>
+              <div className='contentBlock3'>Flat strains designed from virgin-luxurious hair 
+              <ul className='a'>
+<li>The hair is a must-try for those who prefer to take the straightforward route with hair</li>
+<li>It can keep its curls for a very long time if you take care of it well. </li>
+<li>It’s easy to maintain and wash</li>
+<li>The hair is very natural without shedding and tangling </li>
+<li>Coloring and bleaching are allowed, but you should minimize them to protect your hair </li>
+</ul>
+</div>
             </div>
-            <div className='blockContent3'>
-              <div className='titleBlock3'>3. Conditioning your hair extension overnight is advisable.</div>
-              <div className='contentBlock3'>Whatever hair extensions you wear, occasionally conditioning overnight will be good, making it more shiny and healthy. After brushing your hair, apply a suitable amount of hair serum or essential oils to the hair strands, avoiding contact with the roots and scalp. Then wrap your hair extension with a scarf or under your sleeping cap. You will find your hair extension more supple, silky, and smooth in the morning. </div>
-            </div>
-            <div className='detailContent3 detail3'>Indeed, hair extensions always need special care, and sometimes you can not treat them the same way as normal hair. But now, with the information Anka Hair provides, you can at least go to sleep with your hair extensions without any worries. Need more advice on wearing and caring for hair extensions? Feel free to contact our team NOW for the best support you can have. </div>
+            <div className=' detailContent3 detail3'>Sun Hair guarantees that we always sell good quality hair in a wide range of styles, textures, and colors that fit your budget. Don’t hesitate to contact us to get further information right now. 
+</div>
           </div>
         </div>
     </div>
