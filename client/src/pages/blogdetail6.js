@@ -9,7 +9,7 @@ import {
   Vector4,
 } from "../images/blog";
 
-export default function BlogDetail5() {
+export default function BlogDetail6() {
   return (
     <div className="showBlog">
       <Header />
@@ -31,32 +31,24 @@ export default function BlogDetail5() {
       ></div>
 
       <div className="container blockDetailPage">
-        <h1>How To Sleep Comfortably With Hair Extensions</h1>
+        <h1>Which are Vitamin hair growth need?</h1>
         <div className="p1">October 12 - Sun Nguyen</div>
         <div className="detailTitle">
-          For many women, hair extensions and wigs have become a lifesaver to
-          help refresh their everyday looks quickly. The variety of hair
-          extensions has brought more options and, at the same time, transformed
-          every woman into an expert in the art of caretaking. However, the
-          question of how to sleep with hair extensions always confuses many.
-          Should I sleep while wearing my clip-in extension? Is it ok to wrap it
-          with a scarf if I move my head a lot when sleeping? It is essential
-          that you can both preserve your hair extensions properly and get a
-          comfortable sleep. In this article, Anka Hair will give you all the
-          information you need about sleeping with hair extensions.{" "}
+        Vitamins and supplements that promise hair growth almost sound too good to be true. Can taking a pill once or twice a day really make your hair longer, stronger and healthier?.{" "}
         </div>
         <div className="image"></div>
         <div className="section1">
-          <div className="titleHeading1">
+          {/* <div className="titleHeading1">
             Can you sleep with hair extensions?
-          </div>
+          </div> */}
           <div className="detailHeading1">
             <div className="detailContent1">
-              First and foremost, you can sleep with hair extensions. Though it
-              may sound a bit troublesome, all problems can be solved with
-              proper consideration. There are many types of hair extensions and
-              wigs; you will have to notice that some are safe to sleep with and
-              others are not.{" "}
+            Hair loss or thinning hair can be caused by a variety of culprits—including nutrition deficiencies. So while vitamins and supplements are not a miracle cure by any means, the right ones just might make a difference in the way your hair looks and feels.<br/>
+Here’s a look at the best vitamins for hair growth, and a few supplements experts recommend. <br/>
+What Types of Vitamins Help With Hair Growth? <br/>
+Hair growth and healthiness are influenced by a number of factors, including nutrition, genetics, medical conditions, hormones and even stress. Research finds that a deficiency in vitamins and minerals important for normal cell growth and function may contribute to hair loss.<br/>
+“Vitamins are essential for healthy hair growth and may help in preventing hair shedding and thinning,” says Michele Green, M.D., a cosmetic dermatologist in New York. “The best vitamins for hair growth include B vitamins, vitamin D, vitamin E, zinc, biotin and iron.
+
             </div>
             <div className="blockContent1">
               <div className="titleBlock1">

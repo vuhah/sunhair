@@ -13,6 +13,8 @@ import Event from "./layouts/events";
 import Orders from "./pages/order";
 import Completed from "./pages/completed";
 import BlogDetail1 from "./pages/blogdetail1";
+import BlogDetail5 from "./pages/blogdetail5";
+import BlogDetail6 from "./pages/blogdetail6";
 
 function App() {
   return (
@@ -42,10 +44,10 @@ function App() {
         path="blog/how-to-choose-a-wig-for-a-cancer-patient"
         element={<BlogDetail />}
       ></Route>
-      <Route path="blog/about-us" element={<BlogDetail />}></Route>
+      <Route path="blog/about-us" element={<BlogDetail5 />}></Route>
       <Route
         path="blog/which-are-viatmin-hair-growth-need"
-        element={<BlogDetail />}
+        element={<BlogDetail6 />}
       ></Route>
       <Route
         path="blog/how-to-distinguish-human-hair-vs-synthetic-hair"
