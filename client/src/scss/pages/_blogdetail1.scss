@@ -32,7 +32,7 @@
         /* or 162% */
     }
     .image {
-        background-image: url("../../images/blogdetail/324454757_707321214080026_1163678413278502113_n.png");
+        background-image: url("../../images/blogdetail/z4027024629457_40d17298cf46c732a9804780c07bd54b.jpg");
         border-radius: 20px;
         width: 1220px;
         height: 675.28px;
@@ -101,7 +101,7 @@
             font-style: normal;
             font-weight: 600;
             font-size: 40px;
-            line-height: 26px;
+            line-height: 45px;
         }
         .detailHeading2 {
             margin-top: 32px;
@@ -114,6 +114,15 @@
                 line-height: 26px;
                 margin-top: 32px;
                 text-align: justify;
+                .stt {     
+                width: 800px;     
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                    margin-left: 50px;
+                }
             }
             .blockContent2 {
                 margin-top: 32px;
@@ -169,6 +178,10 @@
             }
             .blockContent3 {
                 margin-top: 32px;
+                ul.a {
+                    list-style-type: circle;
+                    margin-left: 50px;
+                }
                 .titleBlock3 {
                     width: 719px;         
                     font-family: 'Roboto';
