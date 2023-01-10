@@ -1,13 +1,35 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Subcrice from "../layouts/subcribe";
+import {
+  Vector1,
+  Vector2,
+  Vector3,
+  Vector4,
+} from "../images/blog";
 
 export default function BlogDetail() {
   return (
     <div className="showBlog">
       <Header />
+      <div
+        className="vector1"
+        style={{ backgroundImage: `url(${Vector1})` }}
+      ></div>
+      <div
+        className="vector2"
+        style={{ backgroundImage: `url(${Vector2})` }}
+      ></div>
+      <div
+        className="vector3"
+        style={{ backgroundImage: `url(${Vector3})` }}
+      ></div>
+      <div
+        className="vector4"
+        style={{ backgroundImage: `url(${Vector4})` }}
+      ></div>
+
       <div className="container blockDetailPage">
         <h1>How To Sleep Comfortably With Hair Extensions</h1>
         <div className="p1">October 12 - Sun Nguyen</div>

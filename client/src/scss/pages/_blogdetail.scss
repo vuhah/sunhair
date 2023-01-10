@@ -1,3 +1,36 @@
+.vector1 {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 600px;
+    left: 0;
+    top: 200px;
+    z-index: -1;
+  }
+
+  .vector2 {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 600px;
+    right: 0;
+    top: 1200px;
+    z-index: -1;
+  }
+  
+  .vector3 {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 1800px;
+    right: 0;
+    top: 1600px;
+    z-index: -1;
+  }
+
 .blockDetailPage {
     text-align: justify;
     h1 {
