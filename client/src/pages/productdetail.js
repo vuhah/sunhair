@@ -101,7 +101,12 @@ export default function ProductDetail() {
               style={{ backgroundImage: `url(${LogoRemoveBg1})` }}
             >
               <h1 className="name">{data.name.toUpperCase()}</h1>
-              <p className="information mt-5">{data.information}</p>
+              {/* <p className="information mt-5">{data.information}</p> */}
+              {data.information.split("</n>").map((ele, index) => (
+                <p key={index} className="contentsection mt-3">
+                  {ele}
+                </p>
+              ))}
 
               <div className="weight d-flex align-items-center mt-5">
                 <p className="askweight 5">
@@ -172,7 +177,12 @@ export default function ProductDetail() {
           <div className="col-9">
             <div className="definition">
               <h2 className="titlesection">What is Vietnamese {data.name} ?</h2>
-              <p className="contentsection mt-3">{data.definition}</p>
+              {/* <p className="contentsection mt-3">{data.definition}</p> */}
+              {data.definition.split('</n>').map((ele, index) => (
+                  <p key={index} className="contentsection mt-3">
+                    {ele}
+                  </p>
+                ))}
             </div>
             <div className="characteristics mt-5">
               <h2 className="titlesection">Chracteristics of {data.name} ?</h2>

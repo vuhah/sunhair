@@ -32,7 +32,7 @@ function Footer() {
                   </p>
                   <div className="mt-5">
                     <img src={WAIcon} className="icon ps-2 me-3" alt=""/>
-                    <span className="icon"> https://wa.me/84912124125</span>
+                    <span className="icon"> Whatsapp (+84)969682226 & (+84)912124125 </span>
                   </div>
   
                   <div className="mt-5">
@@ -48,7 +48,7 @@ function Footer() {
                   <div className="mt-5">
                     <img src={Location} className="icon ps-2 me-3" alt=""/>
                     <span className="icon mt-4">
-                      Dong Binh, Dong Tho, Yen Phong, Bac Ninh Province, Vietnam
+                      Dong Bich, Dong Tho, Yen Phong, Bac Ninh Province, Vietnam
                     </span>
                   </div>
                   <div className="copyright">

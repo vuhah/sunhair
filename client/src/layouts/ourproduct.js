@@ -24,8 +24,7 @@ function OurProducts() {
             <div className="content1">
               <h2 className="title1">Weft hair</h2>
               <p className="copy1">
-                Check out all of these gorgeous mountain trips with beautiful
-                views of, you guessed it, the mountains
+              Weft Hair is one of the best seller products with outstanding quality and affordable price.
               </p>
               <button className="btn1">See all</button>
             </div>
@@ -34,8 +33,8 @@ function OurProducts() {
             <div className="content1">
               <h2 className="title1">Keration Hair</h2>
               <p className="copy1">
-                Check out all of these gorgeous mountain trips with beautiful
-                views of, you guessed it, the mountains
+              Keratin Hair is the high-end hair products with 100% Vietnamese Human Hair
+
               </p>
               <button className="btn1">See all</button>
             </div>
@@ -44,8 +43,8 @@ function OurProducts() {
             <div className="content1">
               <h2 className="title1">Closure</h2>
               <p className="copy1">
-                Check out all of these gorgeous mountain trips with beautiful
-                views of, you guessed it, the mountains
+              Closure Closures allow the ultimate protection for your hair.
+
               </p>
               <button className="btn1">See all</button>
             </div>
@@ -54,10 +53,10 @@ function OurProducts() {
             <div className="content1">
               <h2 className="title1">Bulk Hair</h2>
               <p className="copy1">
-                Check out all of these gorgeous mountain trips with beautiful
-                views of, you guessed it, the mountains
+              Bulk Hair is perfect solution your hair extensions products with reasonable price raw materials & great quality.
+
               </p>
-              <button className="btn1">View Trips</button>
+              <button className="btn1">See All</button>
             </div>
           </div>
         </main>

@@ -20,7 +20,14 @@ function App() {
       <Route path="/product" element={<Product />}></Route>
       <Route path="/product/:productID" element={<ProductDetail />}></Route>
       <Route path="/blog" element={<Blog />}></Route>
-      <Route path="blog/:blogID" element={<BlogDetail />}></Route>
+
+      <Route path="blog/how-to-sleep-comfortably-with-hair-extensions" element={<BlogDetail />}></Route>
+      <Route path="blog/how-to-distinguish-body-wave-and-loose-wave-hair" element={<BlogDetail/>}></Route>
+      <Route path="blog/the-difference-between-bone-straight-and-natural-straight-hair" element={<BlogDetail/>}></Route>
+      <Route path="blog/tape-in-extensions-why-i-should-buy-them" element={<BlogDetail/>}></Route>
+      <Route path="blog/how-to-choose-a-wig-for-a-cancer-patient" element={<BlogDetail/>}></Route>
+      <
+
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="home" element={<HomePanel />}></Route>
         <Route path="store" element={<Store />}></Route>

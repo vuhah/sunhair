@@ -1,4 +1,5 @@
-import { ImgSlide1, ImgSlide2 } from "../images/home/thumbnail";
+import { ImgSlide1, ImgSlide2, ImgSlide3v1 } from "../images/home/thumbnail";
+import Header from "../components/header";
 
 const Slide1 = () => {
   return (
@@ -6,7 +7,7 @@ const Slide1 = () => {
       <div className="container content mt-0">
         <div className="row d-flex align-items-center">
           <div className="col-6">
-            <p className="slogan mb-5">YOUR BEAUTY OUT MISSION</p>
+            <p className="slogan mb-5">YOUR BEAUTY OUR MISSION</p>
             <p className="description w-75">
               We provide ladies all over the world with the most beautiful,
               fashionable hair without causing damage to their natural hair.
@@ -19,7 +20,7 @@ const Slide1 = () => {
               <hr />
               <div className="timeopen ms-5">
                 <p className="text">CLOSE</p>
-                <p className="time mt-2 ps-1">21:30 PM</p>
+                <p className="time mt-2 ps-1">06:00 PM</p>
               </div>
             </div>
           </div>
@@ -40,14 +41,16 @@ const Slide2 = () => {
   );
 };
 
-// const Slide3 = () => {
-//   return (
-//     <div
-//       className="slideshow2"
-//       style={{ backgroundImage: `url(${ImgSlide3})` }}
-//     ></div>
-//   );
-// };
+const Slide3 = () => {
+  return (
+    <div
+      className="slideshow2"
+      style={{ backgroundImage: `url(${ImgSlide3v1})` }}
+    >
+      <Header theme={"light"} />
+    </div>
+  );
+};
 
 export default function Thumbnail() {
   return (
@@ -85,11 +88,9 @@ export default function Thumbnail() {
         <div className="carousel-item">
           <Slide2 />
         </div>
-        {/* <div className="carousel-item">
-        <Header theme={"light"} />
-
+        <div className="carousel-item">
           <Slide3 />
-        </div> */}
+        </div>
       </div>
       <button
         className="carousel-control-prev"
