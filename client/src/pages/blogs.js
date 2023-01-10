@@ -10,6 +10,7 @@ import {
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Subrice from "../layouts/subcribe";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   return (
@@ -48,10 +49,13 @@ export default function Blog() {
         style={{ backgroundImage: `url(${Vector4})` }}
       ></div>
 
-      <AnimationOnScroll className="container content" animateIn="animate__backInDown">
+      <AnimationOnScroll
+        className="container content"
+        animateIn="animate__backInDown"
+      >
         <div className="featured">LASTEST</div>
 
-        <div className="row mt-5 align-items-center ">
+        <Link  to="/blog/how-to-sleep-comfortably-with-hair-extensions" className="row mt-5 align-items-center pe-auto blogheading">
           <div className="col-3">
             <img src={Sleeping} alt="" className="thumbnail" />
           </div>
@@ -65,9 +69,9 @@ export default function Blog() {
               extensions has brought more options and, at the same time,...{" "}
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link  to="/blog/how-to-distinguish-body-wave-and-loose-wave-hair" className="row mt-5 align-items-center pe-auto blogheading">
           <div className="col-3">
             <img src={Sleeping} alt="" className="thumbnail" />
           </div>
@@ -81,7 +85,7 @@ export default function Blog() {
               women change their hairstyle at different events and occasions,...{" "}
             </p>
           </div>
-        </div>
+        </Link>
 
         <div className="row mt-5 align-items-center ">
           <div className="col-3">
@@ -179,7 +183,7 @@ export default function Blog() {
           </div>
         </div>
 
-        <div className="row mt-5 align-items-center ">
+        {/* <div className="row mt-5 align-items-center ">
           <div className="col-3">
             <img src={Sleeping} alt="" className="thumbnail" />
           </div>
@@ -193,7 +197,7 @@ export default function Blog() {
               extensions has brought more options and, at the same time,...{" "}
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="row mt-5 align-items-center ">
           <div className="col-3">
@@ -230,7 +234,10 @@ export default function Blog() {
           <div className="col-9 ps-5">
             <p className="title">WHAT ARE WEFT HAIR EXTENSIONS, ANYWAY?</p>
             <p className="contentsection mt-4">
-            Weft hair extensions are created with real human hair which is sewn (either by hand or by machine) onto a horizontal strip, or “weft.” The stylists here at Autumn Markley Salon then “sew” these strips into the natural hair ...
+              Weft hair extensions are created with real human hair which is
+              sewn (either by hand or by machine) onto a horizontal strip, or
+              “weft.” The stylists here at Autumn Markley Salon then “sew” these
+              strips into the natural hair ...
             </p>
           </div>
         </div>
