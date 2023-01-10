@@ -26,7 +26,9 @@ function App() {
       <Route path="blog/the-difference-between-bone-straight-and-natural-straight-hair" element={<BlogDetail/>}></Route>
       <Route path="blog/tape-in-extensions-why-i-should-buy-them" element={<BlogDetail/>}></Route>
       <Route path="blog/how-to-choose-a-wig-for-a-cancer-patient" element={<BlogDetail/>}></Route>
-      <
+      <Route path="blog/about-us" element={<BlogDetail/>}></Route>
+      <Route path="blog/which-are-viatmin-hair-growth-need" element={<BlogDetail/>}></Route>
+      <Route path 
 
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="home" element={<HomePanel />}></Route>
