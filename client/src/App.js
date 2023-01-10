@@ -12,6 +12,7 @@ import Store from "./layouts/store";
 import Event from "./layouts/events";
 import Orders from "./pages/order";
 import Completed from "./pages/completed";
+import BlogDetail1 from "./pages/blogdetail1";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       ></Route>
       <Route
         path="blog/how-to-distinguish-body-wave-and-loose-wave-hair"
-        element={<BlogDetail />}
+        element={<BlogDetail1 />}
       ></Route>
       <Route
         path="blog/the-difference-between-bone-straight-and-natural-straight-hair"

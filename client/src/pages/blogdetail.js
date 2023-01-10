@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Subcrice from "../layouts/subcribe";
