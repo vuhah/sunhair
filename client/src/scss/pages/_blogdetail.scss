@@ -1,0 +1,190 @@
+.blockDetailPage {
+    text-align: justify;
+    h1 {
+        width: 916px;
+        font-family: 'Yaldevi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 84px;
+        margin-top: 59px;
+        margin-left: 154px;
+    }
+    .p1 {
+        width: 192px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 5px;
+        margin-left: 154px;
+    }
+    .detailTitle {
+        width: 912px;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 49px;
+        margin-left: 154px;
+        /* or 162% */
+    }
+    .image {
+        background-image: url("../../images/blogdetail/324454757_707321214080026_1163678413278502113_n.png");
+        border-radius: 20px;
+        width: 1220px;
+        height: 675.28px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 42px;
+    }
+    .section1 {
+        margin-left: 154px;
+        margin-top: 93.72px;
+        .titleHeading1 {
+            width: 694px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 26px;
+/* identical to box height, or 65% */
+        }
+        .detailHeading1 {
+            margin-top: 32px;
+            .detailContent1 {
+                width: 912px;         
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin-top: 32px;
+            }
+            .blockContent1 {
+                .titleBlock1 {
+                    width: 719px;          
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 26px;
+                    margin-top: 32px;
+                    /* identical to box height, or 108% */
+                }
+                .types1 {
+                    margin-top: 33px;
+                }
+                .contentBlock1 {
+                    width: 912px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-top: 11px;
+                    /* or 162% */
+                }
+            }
+        }
+    }
+    .section2 {
+        margin-left: 154px;
+        margin-top: 112px;
+        .titleHeading2 {
+            width: 651px;    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 26px;
+        }
+        .detailHeading2 {
+            margin-top: 32px;
+            .detailContent2 {
+                width: 912px;          
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin-top: 32px;
+            }
+            .blockContent2 {
+                margin-top: 32px;
+                .titleBlock2 {
+                    width: 719px;        
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 26px;
+                    margin-top: 32px;
+                    /* identical to box height, or 108% */
+                }
+                .contentBlock2 {
+                    width: 912px;         
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-top: 11px;
+                    /* or 162% */
+                }
+            }
+        }
+    }
+    .section3 {
+        margin-left: 154px;
+        margin-top: 93.72px;
+        .titleHeading3 {
+            width: 916px;         
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 42px;
+        }
+        .detailHeading3 {
+            margin-top: 32px;
+            .detailContent3 {
+                width: 912px;          
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                margin-top: 32px;
+            }
+            .detail3 {
+                margin-bottom: 153px;
+            }
+            .blockContent3 {
+                margin-top: 32px;
+                .titleBlock3 {
+                    width: 719px;         
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 26px;
+                    margin-top: 32px;
+                    /* identical to box height, or 108% */
+                }
+                .contentBlock3 {
+                    width: 912px;          
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-top: 11px;
+                    /* or 162% */
+                }
+            }
+        }
+    }
+}
