@@ -1,0 +1,80 @@
+.aboutuspage {
+  .content {
+    padding-top: 62px;
+    .rowcontent {
+      margin-top: 72px;
+      .aboutustitle {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 90px;
+        line-height: 112px;
+        /* identical to box height */
+
+        color: #181818;
+      }
+      .textcontent {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px;
+
+        color: #000000;
+      }
+      .image1 {
+        margin-top: 32px;
+      }
+    }
+    .textcontent2 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      /* or 150% */
+      
+      letter-spacing: 0.02em;
+      
+      color: #000000;
+    }
+    .break{
+      margin-top: 82px;
+      margin-bottom: 52px;
+      border-bottom: 1px solid black;
+      height: 1px;
+    }
+    .minititle {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 49px;
+
+      color: #000000;
+      
+    }
+    .ourvision{
+      margin-top: 102px;
+    }
+    .minibreak{
+      margin-left: 32px;
+      border-left: 1px solid black;
+      height: 222px; 
+    }
+    .minibreak2{
+      margin-left: 32px;
+      border-left: 1px solid black;
+      height: 72px;
+    }
+    .minibreak3{
+      margin-left: 32px;
+      border-left: 1px solid black;
+      height: 142px; 
+    }
+    .section3{
+      margin-top: 102px;
+      margin-bottom: 222px;
+    }
+  }
+}

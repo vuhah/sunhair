@@ -31,43 +31,45 @@
     z-index: -1;
   }
 
-.blockDetailPage {
+.blockDetailPage0 {
+    p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 32px;
+        text-align: justify;
+      }
     h1 {
-        width: 916px;
         font-family: 'Yaldevi';
         font-style: normal;
         font-weight: 500;
         font-size: 64px;
         line-height: 84px;
         margin-top: 92px;
-        margin-left: 154px;
     }
     .p1 {
-        width: 192px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         margin-top: 5px;
-        margin-left: 154px;
     }
     .detailTitle {
-        width: 912px;
         font-family: 'Roboto';
         font-style: italic;
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
         margin-top: 49px;
-        margin-left: 154px;
         text-align: justify;
         /* or 162% */
     }
     .image {
-        background-image: url("../../images/blogdetail/324454757_707321214080026_1163678413278502113_n.png");
+        background-image: url("../../images/blogdetail/blog0/0v1.jpg");
         border-radius: 20px;
-        width: 1220px;
         height: 675.28px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -76,7 +78,6 @@
         margin-right: auto;
     }
     .section1 {
-        margin-left: 154px;
         margin-top: 93.72px;
         .titleHeading1 {
             width: 694px;
@@ -90,7 +91,6 @@
         .detailHeading1 {
             margin-top: 32px;
             .detailContent1 {
-                width: 912px;         
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 400;
@@ -101,7 +101,6 @@
             }
             .blockContent1 {
                 .titleBlock1 {
-                    width: 719px;          
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 500;
@@ -114,7 +113,6 @@
                     margin-top: 33px;
                 }
                 .contentBlock1 {
-                    width: 912px;
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 400;
@@ -128,10 +126,8 @@
         }
     }
     .section2 {
-        margin-left: 154px;
         margin-top: 112px;
         .titleHeading2 {
-            width: 651px;    
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 600;
@@ -141,7 +137,6 @@
         .detailHeading2 {
             margin-top: 32px;
             .detailContent2 {
-                width: 912px;          
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 400;
@@ -153,7 +148,6 @@
             .blockContent2 {
                 margin-top: 32px;
                 .titleBlock2 {
-                    width: 719px;        
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 500;
@@ -163,7 +157,6 @@
                     /* identical to box height, or 108% */
                 }
                 .contentBlock2 {
-                    width: 912px;         
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 400;
@@ -177,10 +170,8 @@
         }
     }
     .section3 {
-        margin-left: 154px;
         margin-top: 93.72px;
         .titleHeading3 {
-            width: 916px;         
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 600;
@@ -190,7 +181,6 @@
         .detailHeading3 {
             margin-top: 32px;
             .detailContent3 {
-                width: 912px;          
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 400;
@@ -205,7 +195,6 @@
             .blockContent3 {
                 margin-top: 32px;
                 .titleBlock3 {
-                    width: 719px;         
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 500;
@@ -215,7 +204,6 @@
                     /* identical to box height, or 108% */
                 }
                 .contentBlock3 {
-                    width: 912px;          
                     font-family: 'Roboto';
                     font-style: normal;
                     font-weight: 400;

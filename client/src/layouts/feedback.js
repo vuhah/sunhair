@@ -19,12 +19,12 @@ function Feedback() {
           animateIn="animate__bounceInLeft"
           className=" row justify-content-around"
         >
-          <div className="col-8 pt-2">
+          <div className="col-4 pt-2">
             <div className="hr mt-5"></div>
           </div>
-          <div className="col-4 text-end">
+          <div className="col-8 text-end">
             <p className="title">
-              CUSTOMERS
+              CUSTOMER FEEDBACK
             </p>
           </div>
         </AnimationOnScroll>
@@ -32,7 +32,7 @@ function Feedback() {
       {/* <p className="title text-end a">SAYING? </p> */}
 
       <div className="container-fluid">
-        <div className="horizontal">
+        <div className="mt-5">
           <div
             id="carouselExampleControls"
             className="carousel slide"
@@ -43,13 +43,13 @@ function Feedback() {
                 <div className="container">
                   <div className="row mt-5 justify-content-around">
                     <div className="col-4 text-center">
-                      <img src={Feedback1} alt="" />
+                      <img src={Feedback1} alt="" className="imgsize" />
                     </div>
                     <div className="col-4 text-center">
-                      <img src={Feedback2} alt="" />
+                      <img src={Feedback2} alt="" className="imgsize" />
                     </div>
                     <div className="col-4 text-center">
-                      <img src={Feedback3} alt="" />
+                      <img src={Feedback3} alt="" className="imgsize" />
                     </div>
                   </div>
                 </div>

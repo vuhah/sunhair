@@ -10,6 +10,8 @@ import SearchIcon from "./search.png"
 import ShoppingCart from "./shopping-cart.png"
 import DownArrow from "./down-arrow.png"
 import Checked from "./checked1.png"
+import Youtube from "./youtube.png"
+import Alibaba from "./alibaba.png"
 
 export {
     Checked,
@@ -23,6 +25,8 @@ export {
     WhatsappIcon,
     SearchIcon,
     ShoppingCart,
-    DownArrow
+    DownArrow,
+    Youtube,
+    Alibaba
 }
 

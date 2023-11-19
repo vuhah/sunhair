@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "../components/header";
+import { Header1, Header2 } from "../components/header";
 import TopEvent from "../components/topEvent";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -53,12 +53,12 @@ export default function Product() {
     <>
       <TopEvent />
       <div className="product container">
-        <Header className="header" />
+        <Header1 className="header" />
         <div className="row justify-content-around align-items-center path-search-cart">
           <div className="col-3 path">{currentPath}</div>
           <div className="col-4 offset-1">
             <SearchBarProduct className="search" />
-          </div>
+          </div> 
           <div className="col-3 offset-1 cartIcon">
             <div className="float-end">
               <Link to="/order">
@@ -70,7 +70,6 @@ export default function Product() {
 
         <div className="row align-items-center mt-5">
           <div className="col-3">
-            <p className="title">CATEGORIES</p>
           </div>
           <div className="col-9">
             <div className="float-end">
@@ -80,31 +79,34 @@ export default function Product() {
         </div>
 
         <div className="row category-product">
-          <div className="col-3 categories pt-1">
-            <form>
-              {Array.from(categoryMap).map((category, index) => (
-                <div key={index} className="mb-4">
-                  <label>
-                    <input
-                      className="option-input radio"
-                      type="radio"
-                      name="category"
-                      id={category[1]}
-                      value={category[1]}
-                      checked={currentCheckBoxCategory === category[1]}
-                      onChange={(e) =>
-                        handleChooseCategory(e, category[1], category[0])
-                      }
-                    />
-                    {category[1]}
-                  </label>
-                </div>
-              ))}
-            </form>
+          <div className="col-3 pt-1">
+            <div className="categories">
+              <p className="title mb-5">CATEGORIES</p>
+              <form>
+                {Array.from(categoryMap).map((category, index) => (
+                  <div key={index} className="mb-4">
+                    <label>
+                      <input
+                        className="option-input radio"
+                        type="radio"
+                        name="category"
+                        id={category[1]}
+                        value={category[1]}
+                        checked={currentCheckBoxCategory === category[1]}
+                        onChange={(e) =>
+                          handleChooseCategory(e, category[1], category[0])
+                        }
+                      />
+                      {category[1]}
+                    </label>
+                  </div>
+                ))}
+              </form>
+            </div>
           </div>
 
-          <div className="col-9">
-            <div className="d-block container-fluid">
+          <div className="col-9 pt-5">
+            <div className="d-block container-fluid container-products">
               <div className="row justify-content-between products">
                 {currentProducts.map((ele, index) => (
                   <div key={index} className="col-4">
@@ -122,7 +124,7 @@ export default function Product() {
         </div>
       </div>
       <RefTab />
-      <Footer />
+      <Footer className="mt-5"/>
     </>
   );
 }

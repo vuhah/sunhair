@@ -28,7 +28,7 @@ export default function AboutUs() {
             Inspired by sun and shine, we desire to make all women natural
             beauty in their way through our hair products
           </p>
-          <a href="/" className="float-end text-end mt-5">
+          <a href="/about-us" className="float-end text-end mt-5">
             Learn more &ensp;
             <img
               src={ExternalLink}

@@ -1,12 +1,22 @@
-import Header from "../components/header";
+import {Header1, Header2} from "../components/header";
 import {
   Bg,
   Vector1,
   Vector2,
   Vector3,
   Vector4,
-  Sleeping,
 } from "../images/blog";
+import Blog0 from "../images/blogdetail/blog0/0v1.jpg";
+import Blog1 from "../images/blogdetail/blog1/1v1.jpg";
+import Blog2 from "../images/blogdetail/blog2/2v1.jpg";
+import Blog3 from "../images/blogdetail/blog3/3v1.jpg";
+import Blog4 from "../images/blogdetail/blog4/4v1.jpg";
+import Blog6 from "../images/blogdetail/blog6/6v1.jpg";
+import Blog7 from "../images/blogdetail/blog7/7v1.jpg";
+import Blog8 from "../images/blogdetail/blog8/8v1.jpg";
+import Blog9 from "../images/blogdetail/blog9/9v1.jpg";
+import Blog10 from "../images/blogdetail/blog10/10v1.jpg";
+
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Subrice from "../layouts/subcribe";
 import Footer from "../components/footer";
@@ -15,7 +25,8 @@ import { Link } from "react-router-dom";
 export default function Blog() {
   return (
     <div className="blog">
-      <Header />
+      <Header2/>
+      <Header1 />
       <AnimationOnScroll
         className="imgheading d-flex align-items-center"
         style={{ backgroundImage: `url(${Bg})` }}
@@ -28,7 +39,9 @@ export default function Blog() {
             world with the most beautiful, fashionable hair without causing
             damage to their natural hair.
           </h2>
-          <button className="readmore">Read more</button>
+          <Link to="/about-us">
+            <button className="readmore">Read more</button>
+          </Link>
         </div>
       </AnimationOnScroll>
 
@@ -55,9 +68,12 @@ export default function Blog() {
       >
         <div className="featured">LASTEST</div>
 
-        <Link  to="/blog/how-to-sleep-comfortably-with-hair-extensions" className="row mt-5 align-items-center pe-auto blogheading">
+        <Link
+          to="/blog/how-to-sleep-comfortably-with-hair-extensions"
+          className="row mt-5 align-items-center pe-auto blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog0} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">
@@ -71,9 +87,12 @@ export default function Blog() {
           </div>
         </Link>
 
-        <Link  to="/blog/how-to-distinguish-body-wave-and-loose-wave-hair" className="row mt-5 align-items-center pe-auto blogheading">
+        <Link
+          to="/blog/how-to-distinguish-body-wave-and-loose-wave-hair"
+          className="row mt-5 align-items-center pe-auto blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog1} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">
@@ -87,9 +106,12 @@ export default function Blog() {
           </div>
         </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/the-difference-between-bone-straight-and-natural-straight-hair"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog2} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">
@@ -102,11 +124,14 @@ export default function Blog() {
               factors. Please follow us to find out. ,...{" "}
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/tape-in-extensions-why-i-should-buy-them"
+          className="row mt-5 align-items-center  blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog3} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">Tape-in Extensions: Why I Should Buy Them?</p>
@@ -118,11 +143,14 @@ export default function Blog() {
               a must-have item for all ladies worldwide.,...{" "}
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/how-to-choose-a-wig-for-a-cancer-patient"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog4} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">How To Choose A Wig For A Cancer Patient?</p>
@@ -134,9 +162,9 @@ export default function Blog() {
               length, or style,...
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        {/* <Link to="/blog/about-us" className="row mt-5 align-items-center ">
           <div className="col-3">
             <img src={Sleeping} alt="" className="thumbnail" />
           </div>
@@ -149,11 +177,14 @@ export default function Blog() {
               of Vietnam's leading hair suppliers, ...
             </p>
           </div>
-        </div>
+        </Link> */}
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/which-are-viatmin-hair-growth-need"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog6} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">Which are Vitamin hair growth need?</p>
@@ -163,11 +194,14 @@ export default function Blog() {
               your hair longer, stronger and healthier?...
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/how-to-distinguish-human-hair-vs-synthetic-hair"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog7} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">
@@ -181,7 +215,7 @@ export default function Blog() {
               makes synthetic and human hair wigs different!...
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* <div className="row mt-5 align-items-center ">
           <div className="col-3">
@@ -199,9 +233,12 @@ export default function Blog() {
           </div>
         </div> */}
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/9-tricks-for-healthier-fully-looking-hair"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog8} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">9 Tricks for Healthier, Fuller-Looking Hair</p>
@@ -212,11 +249,14 @@ export default function Blog() {
               proper care can keep your mane a head above the rest...
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="row mt-5 align-items-center ">
+        <Link
+          to="/blog/some-tips-about-hair-extensions"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog9} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">Some Tips About Hair Extensions</p>
@@ -226,10 +266,13 @@ export default function Blog() {
               itself.
             </p>
           </div>
-        </div>
-        <div className="row mt-5 align-items-center ">
+        </Link>
+        <Link
+          to="/blog/what-are-weft-hair-extensions-anyway"
+          className="row mt-5 align-items-center blogheading"
+        >
           <div className="col-3">
-            <img src={Sleeping} alt="" className="thumbnail" />
+            <img src={Blog10} alt="" className="thumbnail" />
           </div>
           <div className="col-9 ps-5">
             <p className="title">WHAT ARE WEFT HAIR EXTENSIONS, ANYWAY?</p>
@@ -240,7 +283,7 @@ export default function Blog() {
               strips into the natural hair ...
             </p>
           </div>
-        </div>
+        </Link>
       </AnimationOnScroll>
       <Subrice />
       <Footer />

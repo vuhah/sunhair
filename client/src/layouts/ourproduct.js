@@ -1,5 +1,6 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ExternalLink } from "../images/common";
+import { Link } from "react-router-dom";
 
 function OurProducts() {
   return (
@@ -17,46 +18,43 @@ function OurProducts() {
         </div>
 
         <main className="page-content1">
-          <div
-            className="card1"
-
-          >
+          <div className="card1">
             <div className="content1">
               <h2 className="title1">Weft hair</h2>
               <p className="copy1">
-              Weft Hair is one of the best seller products with outstanding quality and affordable price.
+                Weft Hair is one of the best seller products with outstanding
+                quality and affordable price.
               </p>
-              <button className="btn1">See all</button>
+              <Link to='/product' className="btn1">See all</Link>
             </div>
           </div>
           <div className="card1">
             <div className="content1">
               <h2 className="title1">Keration Hair</h2>
               <p className="copy1">
-              Keratin Hair is the high-end hair products with 100% Vietnamese Human Hair
-
+                Keratin Hair is the high-end hair products with 100% Vietnamese
+                Human Hair
               </p>
-              <button className="btn1">See all</button>
+              <Link to='/product' className="btn1">See all</Link>
             </div>
           </div>
           <div className="card1">
             <div className="content1">
               <h2 className="title1">Closure</h2>
               <p className="copy1">
-              Closure Closures allow the ultimate protection for your hair.
-
+                Closure Closures allow the ultimate protection for your hair.
               </p>
-              <button className="btn1">See all</button>
+              <Link to='/product' className="btn1">See all</Link>
             </div>
           </div>
           <div className="card1">
             <div className="content1">
               <h2 className="title1">Bulk Hair</h2>
               <p className="copy1">
-              Bulk Hair is perfect solution your hair extensions products with reasonable price raw materials & great quality.
-
+                Bulk Hair is perfect solution your hair extensions products with
+                reasonable price raw materials & great quality.
               </p>
-              <button className="btn1">See All</button>
+              <Link to='/product' className="btn1">See all</Link>
             </div>
           </div>
         </main>

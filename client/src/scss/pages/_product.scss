@@ -1,18 +1,17 @@
 .product {
   font-family: "Yaldevi";
-
   .header {
-    top: 40px !important;
+    top: 20px !important;
     .nav-link {
       font-size: 13px !important;
     }
   }
   .path-search-cart {
-    margin-top: 88px;
+    margin-top: 60px;
     z-index: 1;
     .path {
       font-weight: 500;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 13px;
       color: #735e17;
     }
@@ -25,8 +24,9 @@
     font-size: 20px;
   }
   .category-product {
-    margin-top: 40px;
+    margin-top: 0px;
     .categories {
+      margin-top: -30px;
       .option-input {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -99,15 +99,22 @@
           opacity: 0;
         }
       }
-    }
-    .products {
-      max-height: 10  40px;
-      min-height: 800px;
+    } 
+    .container-products{
+      height: 500px;
+      margin-bottom: 30px;
       overflow: auto;
       &::-webkit-scrollbar {
         width: 6px;
         background-color: transparent;
+      } 
+      .products {
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: transparent;
+        }
       }
     }
+
   }
 }

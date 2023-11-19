@@ -1,58 +1,77 @@
-import { ImgSlide1, ImgSlide2, ImgSlide3v1 } from "../images/home/thumbnail";
-import Header from "../components/header";
-
-const Slide1 = () => {
-  return (
-    <div className="slideshow1">
-      <div className="container content mt-0">
-        <div className="row d-flex align-items-center">
-          <div className="col-6">
-            <p className="slogan mb-5">YOUR BEAUTY OUR MISSION</p>
-            <p className="description w-75">
-              We provide ladies all over the world with the most beautiful,
-              fashionable hair without causing damage to their natural hair.
-            </p>
-            <div className="d-flex align-items-center mt-5 pb-5">
-              <div className="timeopen me-5">
-                <p className="text">OPEN</p>
-                <p className="time mt-2 ps-1">09:00 AM</p>
-              </div>
-              <hr />
-              <div className="timeopen ms-5">
-                <p className="text">CLOSE</p>
-                <p className="time mt-2 ps-1">06:00 PM</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <img src={ImgSlide1} alt="" className="float-end" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-const Slide2 = () => {
-  return (
-    <div
-      className="slideshow2"
-      style={{ backgroundImage: `url(${ImgSlide2})` }}
-    ></div>
-  );
-};
-
-const Slide3 = () => {
-  return (
-    <div
-      className="slideshow2"
-      style={{ backgroundImage: `url(${ImgSlide3v1})` }}
-    >
-      <Header theme={"light"} />
-    </div>
-  );
-};
+import { ImgSlide2, ImgSlide3v1, ImgSlidev1 } from "../images/home/thumbnail";
+import { Header1, Header2 } from "../components/header";
+import { useState } from "react";
 
 export default function Thumbnail() {
+  const [theme, setTheme] = useState("dark");
+
+  const Slide1 = () => {
+    // setTheme("dark");
+    // return (
+    //   <div className="slideshow1">
+    //     <div className="container content mt-0">
+    //       <div className="row d-flex align-items-center">
+    //         <div className="col-6">
+    //           <p className="slogan mb-5">YOUR BEAUTY OUR MISSION</p>
+    //           <p className="description w-75">
+    //             We provide ladies all over the world with the most beautiful,
+    //             fashionable hair without causing damage to their natural hair.
+    //           </p>
+    //           <div className="d-flex align-items-center mt-5 pb-5">
+    //             <div className="timeopen me-5">
+    //               <p className="text">OPEN</p>
+    //               <p className="time mt-2 ps-1">09:00 AM</p>
+    //             </div>
+    //             <hr />
+    //             <div className="timeopen ms-5">
+    //               <p className="text">CLOSE</p>
+    //               <p className="time mt-2 ps-1">06:00 PM</p>
+    //             </div>
+    //           </div>
+    //         </div>
+    //         <div className="col-6">
+    //           <img src={Img1elemenr} alt="" className="image float-end" />
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <Header1 theme={"dark"} />
+    //   </div>
+    // );
+    setTheme("light");
+    return (
+      <div
+        className="slideshow2"
+        style={{ backgroundImage: `url(${ImgSlidev1})` }}
+      >
+        <Header1 theme={"light"} />
+      </div>
+    );
+  };
+
+  const Slide2 = () => {
+    setTheme("dark");
+    return (
+      <div
+        className="slideshow2"
+        style={{ backgroundImage: `url(${ImgSlide2})` }}
+      >
+        <Header1 theme={"dark"} />
+      </div>
+    );
+  };
+
+  const Slide3 = () => {
+    setTheme("light");
+    return (
+      <div
+        className="slideshow2"
+        style={{ backgroundImage: `url(${ImgSlide3v1})` }}
+      >
+        <Header1 theme={"light"} />
+      </div>
+    );
+  };
+
   return (
     <div
       id="carouselExampleIndicators"

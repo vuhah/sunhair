@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://sunhair-x98n.vercel.app/api/",
+  baseURL: "https://sunhair-t9y8.vercel.app/api/",
   headers: {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "*",

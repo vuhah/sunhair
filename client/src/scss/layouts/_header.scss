@@ -1,6 +1,7 @@
 .header {
+  
   li.nav-item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 72px;
   }
   .contact {
     width: 120px;
@@ -15,8 +16,8 @@
     }
   }
   .nav-link {
-    font-weight: 300;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 14px;
     color: black;
   }
   z-index: 1;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Header from "../components/header";
+import {Header1, Header2} from "../components/header";
 import Footer from "../components/footer";
 import Subcrice from "../layouts/subcribe";
 import {
@@ -12,7 +12,8 @@ import {
 export default function BlogDetail5() {
   return (
     <div className="showBlog">
-      <Header />
+      <Header1 />
+      <Header2/>
       <div
         className="vector1"
         style={{ backgroundImage: `url(${Vector1})` }}

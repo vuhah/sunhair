@@ -1,11 +1,12 @@
-import Header from "../components/header";
+import {Header1, Header2} from "../components/header";
 import { Checked } from "../images/order";
 import { Link } from "react-router-dom";
 
 export default function Completed() {
   return (
     <div className="completed">
-      <Header />
+      <Header1 />
+      <Header2/>
       <div className="content d-flex flex-column align-items-center justify-content-center">
         <h1>Thank you for your order!</h1>
         <p className="mt-4">

@@ -34,11 +34,11 @@ function Footer() {
                     <img src={WAIcon} className="icon ps-2 me-3" alt=""/>
                     <span className="icon"> Whatsapp (+84)969682226 & (+84)912124125 </span>
                   </div>
-  
+{/*   
                   <div className="mt-5">
                     <img src={PhoneIcon} className="icon ps-2 me-3 " alt=""/>
                     <span className="icon "> (+84) 969-682-226 </span>
-                  </div>
+                  </div> */}
   
                   <div className="mt-5">
                     <img src={EmailIcon} className="icon ps-2 me-3" alt=""/>
